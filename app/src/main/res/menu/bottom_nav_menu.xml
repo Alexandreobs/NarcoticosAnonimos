@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/btm_menu_de_botoes"
+        android:icon="@drawable/livro_aberto"
+        android:title="TEXTOS" />
+
+    <item
+        android:id="@+id/doze_tradicoes"
+        android:icon="@drawable/home_com_livro"
+        android:title="As 12 Tradições" />
+
+    <item
+        android:id="@+id/doze_conceitos"
+        android:icon="@drawable/bala_coracao"
+        android:title="Os 12 conceitos" />
+
+    <item
+        android:id="@+id/btn_oracoes"
+        android:icon="@drawable/bem_estar"
+        android:title="Oracões" />
+
+</menu>
