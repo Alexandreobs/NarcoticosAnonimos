@@ -1,4 +1,4 @@
-package view.fragments
+package com.alexandreobsilva.a12passosnamauricio.view.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,24 +7,24 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.alexandreobsilva.a12passosnamauricio.R
-import kotlinx.android.synthetic.main.fragment_dozeconceitos.view.*
-import model.pojos.listaDozeConceitos
-import view.adapter.AdapterDasListas
+import kotlinx.android.synthetic.main.fragment_orar.view.*
+import com.alexandreobsilva.a12passosnamauricio.model.pojos.listaDeOracoes
+import com.alexandreobsilva.a12passosnamauricio.view.adapter.AdapterDasListas
 
 
-class DozeconceitosFragment : Fragment() {
+class OrarFragment : Fragment() {
 
     lateinit var adapterDasListas: AdapterDasListas
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val minhaView = inflater.inflate(R.layout.fragment_dozeconceitos, container, false)
 
-        with(minhaView.recycler_dozeconceitos) {
-            adapter = AdapterDasListas(context, listaDozeConceitos)
+        val minhaView = inflater.inflate(R.layout.fragment_orar, container, false)
+
+        with(minhaView.recycler_oracoes) {
+            adapter = AdapterDasListas(context, listaDeOracoes)
             layoutManager = LinearLayoutManager(
                 context,
                 LinearLayoutManager.VERTICAL,

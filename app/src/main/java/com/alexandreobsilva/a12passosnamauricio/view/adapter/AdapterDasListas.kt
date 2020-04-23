@@ -1,4 +1,4 @@
-package view.adapter
+package com.alexandreobsilva.a12passosnamauricio.view.adapter
 
 import android.content.Context
 import android.content.Intent
@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.alexandreobsilva.a12passosnamauricio.R
 import kotlinx.android.synthetic.main.item_recycler.view.*
-import model.pojos.PassosTradicoesConceitos
-import view.activitys.DetalheActivity
+import com.alexandreobsilva.a12passosnamauricio.model.pojos.PassosTradicoesConceitos
+import com.alexandreobsilva.a12passosnamauricio.view.activitys.DetalheActivity
 
 class AdapterDasListas(private val context: Context, private var textoListas: MutableList<PassosTradicoesConceitos>) :
     RecyclerView.Adapter<AdapterDasListas.GameViewHolder>() {

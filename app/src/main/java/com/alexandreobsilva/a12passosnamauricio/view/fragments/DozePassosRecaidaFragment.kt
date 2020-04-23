@@ -1,4 +1,4 @@
-package view.fragments
+package com.alexandreobsilva.a12passosnamauricio.view.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,9 +8,8 @@ import android.view.ViewGroup
 
 import com.alexandreobsilva.a12passosnamauricio.R
 import kotlinx.android.synthetic.main.fragment_doze_passos_recaida.view.*
-import kotlinx.android.synthetic.main.fragment_dozepassos.view.*
-import model.pojos.listaDeRecaidas
-import view.adapter.AdapterDasListas
+import com.alexandreobsilva.a12passosnamauricio.model.pojos.listaDeRecaidas
+import com.alexandreobsilva.a12passosnamauricio.view.adapter.AdapterDasListas
 
 
 class DozePassosRecaidaFragment : Fragment() {

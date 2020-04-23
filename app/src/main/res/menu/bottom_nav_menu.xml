@@ -7,18 +7,18 @@
         android:title="TEXTOS" />
 
     <item
-        android:id="@+id/doze_tradicoes"
+        android:id="@+id/btn_linksUteis"
         android:icon="@drawable/home_com_livro"
-        android:title="As 12 Tradições" />
+        android:title="Links Úteis" />
 
     <item
-        android:id="@+id/doze_conceitos"
+        android:id="@+id/btn_diario"
         android:icon="@drawable/bala_coracao"
-        android:title="Os 12 conceitos" />
+        android:title="Diario" />
 
     <item
-        android:id="@+id/btn_oracoes"
+        android:id="@+id/btn_calculadora"
         android:icon="@drawable/bem_estar"
-        android:title="Oracões" />
+        android:title="Calculadora" />
 
 </menu>

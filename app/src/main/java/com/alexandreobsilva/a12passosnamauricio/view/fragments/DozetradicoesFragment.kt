@@ -1,4 +1,4 @@
-package view.fragments
+package com.alexandreobsilva.a12passosnamauricio.view.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.alexandreobsilva.a12passosnamauricio.R
 import kotlinx.android.synthetic.main.fragment_dozetradicoes.view.*
-import model.pojos.listaDozeTradicoes
-import view.adapter.AdapterDasListas
+import com.alexandreobsilva.a12passosnamauricio.model.pojos.listaDozeTradicoes
+import com.alexandreobsilva.a12passosnamauricio.view.adapter.AdapterDasListas
 
 
 class DozetradicoesFragment : Fragment() {

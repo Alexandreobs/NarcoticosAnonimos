@@ -1,20 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.alexandreobsilva.a12passosnamauricio.view.fragments.MenuDeTextosFragment">
+    tools:context=".view.fragments.PaginaDeLinksFragment">
 
     <Button
 
-        android:id="@+id/button_doze_passos"
+        android:id="@+id/button_link_Na"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/menu_botoes_estilo"
-        android:text="Os 12 Passos NA"
+        android:text="Site Narcóticos Anônimos"
         android:textColor="@color/colorBranca"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,52 +24,52 @@
     <Button
         android:textColor="@color/colorBranca"
         android:background="@drawable/menu_botoes_estilo"
-        android:id="@+id/button_doze_conceitos"
+        android:id="@+id/button_linkAA"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="30dp"
-        android:text="Os 12 Conceitos NA"
+        android:text="Site Alcoólicos Anónimos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.458"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_doze_passos" />
+        app:layout_constraintTop_toBottomOf="@+id/button_link_Na" />
 
     <Button
         android:textColor="@color/colorBranca"
         android:background="@drawable/menu_botoes_estilo"
-        android:id="@+id/button_doze_tradicoes"
+        android:id="@+id/button_link_cvv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="30dp"
-        android:text="As 12 Tradições NA"
+        android:text="Site Centro de Valorização da Vida"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.458"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_doze_conceitos" />
+        app:layout_constraintTop_toBottomOf="@+id/button_linkAA" />
 
     <Button
         android:textColor="@color/colorBranca"
         android:background="@drawable/menu_botoes_estilo"
-        android:id="@+id/button_oracoes"
+        android:id="@+id/button_link_indefinido"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="30dp"
-        android:text="Orações"
+        android:text="link indefinido"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.458"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_doze_tradicoes" />
+        app:layout_constraintTop_toBottomOf="@+id/button_link_cvv" />
 
     <Button
         android:textColor="@color/colorBranca"
         android:background="@drawable/menu_botoes_estilo"
-        android:id="@+id/button_doze_recaidas"
+        android:id="@+id/button_link_indefinido2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -78,25 +79,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.458"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_oracoes" />
-
-    <Button
-        android:textColor="@color/colorBranca"
-        android:background="@drawable/menu_botoes_estilo"
-        android:id="@+id/button_doze_passos_AA"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="30dp"
-        android:text="Os 12 Passos AA"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.458"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_doze_recaidas" />
-
-
-
+        app:layout_constraintTop_toBottomOf="@+id/button_link_indefinido" />
 
 
 

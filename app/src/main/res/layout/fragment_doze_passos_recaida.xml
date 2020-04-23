@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="view.fragments.DozePassosRecaidaFragment">
+    tools:context="com.alexandreobsilva.a12passosnamauricio.view.fragments.DozePassosRecaidaFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_dozepassosRecaida"

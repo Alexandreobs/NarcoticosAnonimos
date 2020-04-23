@@ -1,4 +1,4 @@
-package view.fragments
+package com.alexandreobsilva.a12passosnamauricio.view.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -18,7 +18,6 @@ class MenuDeTextosFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val minhaView = inflater.inflate(R.layout.fragment_menu_de_textos, container, false)
 
         minhaView.button_doze_passos.setOnClickListener(View.OnClickListener {
@@ -53,6 +52,13 @@ class MenuDeTextosFragment : Fragment() {
             val manager: FragmentManager? = fragmentManager
             val transaction: FragmentTransaction = manager!!.beginTransaction()
             transaction.replace(R.id.nav_host_fragment, DozePassosRecaidaFragment())
+            transaction.commit()
+        })
+
+        minhaView.button_doze_passos_AA.setOnClickListener(View.OnClickListener {
+            val manager: FragmentManager? = fragmentManager
+            val transaction: FragmentTransaction = manager!!.beginTransaction()
+            transaction.replace(R.id.nav_host_fragment, DozePassosAAFragment())
             transaction.commit()
         })
 
