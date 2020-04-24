@@ -7,7 +7,8 @@ import java.io.Serializable
 
 @Entity
 class TextosDoDiario(
-    @PrimaryKey val uid: Int,
+    @PrimaryKey(autoGenerate = true)
+    val uid: Int,
     @ColumnInfo(name = "texto_diario") var comrpoTexto: String,
     @ColumnInfo(name = "data_diario") var dataDoTexto: String,
     @ColumnInfo(name = "hora_diario") var horaDoTexto: String
