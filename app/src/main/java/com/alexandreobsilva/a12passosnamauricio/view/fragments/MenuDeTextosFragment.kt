@@ -62,6 +62,13 @@ class MenuDeTextosFragment : Fragment() {
             transaction.commit()
         })
 
+        minhaView.button_amorExigente.setOnClickListener(View.OnClickListener {
+            val manager: FragmentManager? = fragmentManager
+            val transaction: FragmentTransaction = manager!!.beginTransaction()
+            transaction.replace(R.id.nav_host_fragment, AmorExigenteFragment())
+            transaction.commit()
+        })
+
         return minhaView
     }
 

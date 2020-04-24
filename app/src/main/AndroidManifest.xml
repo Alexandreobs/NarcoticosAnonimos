@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.activitys.CalculadoraActivity"></activity>
+        <activity android:name=".view.activitys.DetalheDiarioActivity"></activity>
+        <activity android:name=".view.activitys.CalculadoraActivity" />
         <activity android:name=".view.activitys.TesteActivity" />
         <activity android:name=".view.activitys.DetalheActivity" />
         <activity android:name=".dozepassosActivity" />

@@ -478,3 +478,55 @@ val listaDozePassosAA: MutableList<PassosTradicoesConceitos> = mutableListOf(
     )
 
 )
+
+val listaDozeAmorExigente: MutableList<PassosTradicoesConceitos> = mutableListOf(
+
+    PassosTradicoesConceitos(
+        "1º - Identificador",
+        "Os problemas da família, da escola e da comunidade têm raízes na estruturação atual da sociedade. Em linhas gerais, este Princípio identifica os valores, aquilo que somos e o que queremos ser. Trabalha os objetivos de cada pessoa, para que se ajudem mutuamente."
+    ),
+    PassosTradicoesConceitos(
+        "2º - Humanizador",
+        "Os pais também são gente. Professores também são gente. Você também é gente. Quer dizer que não somos super heróis e nem somos perfeitos, ao contrário, devemos aceitar nossas limitações e nos perdoar sem perder a autoridade, o amor pela vida e nem desanimar por causa dos problemas."
+    ),
+    PassosTradicoesConceitos(
+        "3º - Protetor",
+        "Os recursos são limitados Precisamos aceitar que não somos uma fonte ilimitada de recursos. Para isso, devemos avaliar e conhecer os próprios limites: físicos, emocionais e econômicos sabendo que nosso amor, maturidade, e disposição vencem quando aprendermos a ceder e compreender os limites dos outros"
+    ),
+    PassosTradicoesConceitos(
+        "4º - Valorizador",
+        "Pais e filhos não são iguais. Professores e alunos não iguais. Você e eu não somos iguais. Cada um de nós tem um papel diferente. É importante assumir nossa missão de Pai, Professor ou Médico em fim, e orientar, nortear a conduta das pessoas, estabelecendo normas e regras que precisam ser respeitadas para o bem de todos."
+    ),
+    PassosTradicoesConceitos(
+        "5º - Libertador",
+        "O Sentimento de culpa torna as pessoas indefesas e sem ação. Acusar alguém ou alguma coisa para se livrar da responsabilidade do que não está dando certo com você ou com os seus nada resolve. Sem sentimento de culpa, de autopiedade ou de raiva, estaremos livres para agir e deixar que os outros cresçam, arcando com as consequências (boas ou más) do próprio comportamento."
+    ),
+    PassosTradicoesConceitos(
+        "6º - Influenciador",
+        "O comportamento dos filhos afeta os pais; o comportamento dos pais afeta os filhos. O comportamento do aluno afeta o professor; o comportamento do professor afeta o aluno. Meu comportamento afeta você; seu comportamento me afeta. Diante de um comportamento inaceitável, não podemos competir com a outra pessoa ou perder a dignidade. É preciso manter o equilíbrio para conduzir os relacionamentos no rumo certo."
+    ),
+    PassosTradicoesConceitos(
+        "7º - Preparador",
+        "Tomar atitude precipita crise. Vamos nos preparar, não permitir abusos e desrespeitos e cuidar para que nossas atitudes sejam corretas e corajosas. Devemos assumir posições claras e bem definidas e ser firmes e perseverantes, sem nos omitir, nem delegar responsabilidades para terceiros."
+    ),
+    PassosTradicoesConceitos(
+        "8º - Esperançador",
+        "Da crise bem administrada, surge a possibilidade de mudança positiva Este é um princípio de extrema importância para que possamos atingir os resultados desejados com a aplicação do Programa Amor-Exigente. Devemos ter um plano de ação com metas, prioridades e fazer o que precisa ser feito, sem pena do outro ou de si próprio."
+    ),
+    PassosTradicoesConceitos(
+        "9º - Apoiador",
+        "Na comunidade, as famílias precisam dar e receber apoio. Os grupos do Amor-Exigente reúnem pessoas em busca de ajuda para si mesmas e para os seus compartilhando experiências, informações e instruções. Assim, elas não se sentem sozinhas e têm um ambiente propício para juntas com uma comunidade irmã, encontrarem novos caminhos."
+    ),
+    PassosTradicoesConceitos(
+        "10º - Cooperador",
+        "A essência da família repousa na cooperação, não só na convivência. Devemos participar de trabalhos na família e na comunidade facilitando a cooperação e a solidariedade entre as pessoas. Isso nos dá a oportunidade de nos valorizar, de melhorar nossa auto-estima, e fazer parte das mudanças de uma época, assumindo a responsabilidade social que nos cabe."
+    ),
+    PassosTradicoesConceitos(
+        "11º - Organizador",
+        "A exigência na disciplina tem o objetivo de ordenar e organizar a vida dos pais, dos filhos e de toda a família. A exigência na disciplina tem o objetivo de ordenar e organizar a minha vida. Sem organização e disciplina, nos sentimos infantis e inseguros. É preciso estabelecer limites e criar condições para desabrochar o que temos de bom para sermos cada vez melhores."
+    ),
+    PassosTradicoesConceitos(
+        "12º - Compensador",
+        "O amor com respeito, sem egoísmo, sem comodismo deve ser também um amor que orienta, educa e exige. Amo você, só não aceito o que você está fazendo de errado. Amar não é fazer tudo pelas pessoas ou dar-lhes tudo o que é possível. Amar é essencialmente dar condições para que saibam escolher o que é correto e bom para si próprios e para os outros."
+    )
+)

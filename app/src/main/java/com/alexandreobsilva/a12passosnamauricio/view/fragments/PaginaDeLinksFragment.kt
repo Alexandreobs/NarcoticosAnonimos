@@ -32,6 +32,10 @@ class PaginaDeLinksFragment : Fragment() {
             iniciaWeb("https://www.cvv.org.br/")
         })
 
+        minhaView.button_link_amor.setOnClickListener(View.OnClickListener {
+            iniciaWeb("http://amorexigente.org.br/")
+        })
+
         return minhaView
     }
 

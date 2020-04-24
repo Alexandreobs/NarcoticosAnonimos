@@ -7,6 +7,7 @@
     tools:context=".view.fragments.DiarioFragment">
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="2dp"
@@ -16,12 +17,13 @@
         app:layout_constraintBottom_toTopOf="@+id/button_diario_salvar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_diario_data">
+        app:layout_constraintTop_toBottomOf="@+id/txt_diario_hora">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Escreva aqui"
+            android:gravity="clip_horizontal"
+            android:hint="@string/texto_Explicatido_Diario"
             android:textColorHint="@color/colorPreta" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -42,13 +44,12 @@
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="150dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="35dp"
         android:gravity="center"
         android:text="Data e Hora"
         android:textColor="@color/colorPreta"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -56,24 +57,52 @@
         android:id="@+id/txt_diario_data"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
-        android:hint="Hora"
+        android:hint="Data"
         android:textColor="@color/colorPreta"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintEnd_toEndOf="@id/textView"
+        app:layout_constraintStart_toStartOf="@id/textView"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
 
     <TextView
         android:id="@+id/txt_diario_hora"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:hint="Hora"
+        android:layout_marginTop="5dp"
         android:gravity="center"
+        android:hint="Hora"
         android:textColor="@color/colorPreta"
+        app:layout_constraintEnd_toEndOf="@id/textView"
+        app:layout_constraintStart_toStartOf="@id/textView"
+        app:layout_constraintTop_toBottomOf="@id/txt_diario_data" />
+
+    <ImageView
+        android:id="@+id/btn_acessar_arquivo_diario"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:src="@drawable/arquivo_diario"
+        app:layout_constraintBottom_toTopOf="@id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Acessar arquivos do diario"
+        android:textColor="@color/colorPreta"
+        app:layout_constraintBottom_toTopOf="@id/textInputLayout"
+        app:layout_constraintEnd_toEndOf="@id/btn_acessar_arquivo_diario"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/btn_acessar_arquivo_diario" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

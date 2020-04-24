@@ -13,7 +13,7 @@
 
     <item
         android:id="@+id/btn_diario"
-        android:icon="@drawable/bala_coracao"
+        android:icon="@drawable/livro_com_lapis"
         android:title="Diario" />
 
     <item
