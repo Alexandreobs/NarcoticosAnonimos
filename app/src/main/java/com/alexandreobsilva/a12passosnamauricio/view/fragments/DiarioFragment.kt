@@ -28,7 +28,7 @@ class DiarioFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val minhaView = inflater.inflate(R.layout.fragment_diario, container, false)
-         diarioDAO = MeuDataBaseRoom.getInstance(context!!).diarioDao()
+        diarioDAO = MeuDataBaseRoom.getDatabase(context!!).diarioDao()
 
         capturaData(minhaView)
         capturaHora(minhaView)
