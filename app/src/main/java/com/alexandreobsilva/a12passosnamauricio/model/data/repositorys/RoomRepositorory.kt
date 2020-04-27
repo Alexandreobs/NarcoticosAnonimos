@@ -5,8 +5,10 @@ import com.alexandreobsilva.a12passosnamauricio.model.data.MeuDataBaseRoom
 import com.alexandreobsilva.a12passosnamauricio.model.pojos.TextosDoDiario
 
 class RoomRepositorory(
+
     meuDataBaseRoom: MeuDataBaseRoom
 ) : DiarioRepository {
+
     private val DiarioDAO = meuDataBaseRoom.diarioDao()
 
     override fun save(textos: TextosDoDiario) {

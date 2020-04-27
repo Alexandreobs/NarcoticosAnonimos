@@ -14,7 +14,7 @@ class DetalheDiarioActivity : AppCompatActivity() {
 
         val recebidos = intent.extras?.getSerializable("Key10") as TextosDoDiario
 
-        txt_detalhe_diario_corpo.text = recebidos.comrpoTexto
+        txt_detalhe_diario_corpo.text = recebidos.comrpoDoTexto
         txt_detalhe_diario_data.text = recebidos.dataDoTexto
         txt_detalhe_diario_hora.text = recebidos.horaDoTexto
     }

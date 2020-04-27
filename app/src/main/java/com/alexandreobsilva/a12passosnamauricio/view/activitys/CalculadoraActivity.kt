@@ -1,8 +1,8 @@
 package com.alexandreobsilva.a12passosnamauricio.view.activitys
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.alexandreobsilva.a12passosnamauricio.R
 import kotlinx.android.synthetic.main.activity_calculadora.*
 
@@ -15,6 +15,13 @@ class CalculadoraActivity : AppCompatActivity() {
         button_calculadora_voltar.setOnClickListener(View.OnClickListener {
             finish()
 
+           var aa = inputDataCalculadora2.editableText
+
+            buttonCalcular.setOnClickListener(View.OnClickListener {
+                textResultadoCalculadora.setText(aa)
+            })
+
         })
     }
+
 }

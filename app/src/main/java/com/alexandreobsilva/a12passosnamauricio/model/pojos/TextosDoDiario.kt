@@ -11,7 +11,7 @@ class TextosDoDiario(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = COLUMN_ID)
     var id: Long = 0,
-    @ColumnInfo(name = "texto_diario") var comrpoTexto: String,
+    @ColumnInfo(name = "texto_diario") var comrpoDoTexto: String,
     @ColumnInfo(name = "data_diario") var dataDoTexto: String,
     @ColumnInfo(name = "hora_diario") var horaDoTexto: String
 ) :

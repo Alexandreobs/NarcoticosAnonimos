@@ -22,13 +22,13 @@ import java.util.*
 class DiarioFragment : Fragment() {
 
     lateinit var diarioDAO: DiarioDAO
+    private var textodiario: TextosDoDiario? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val minhaView = inflater.inflate(R.layout.fragment_diario, container, false)
-        diarioDAO = MeuDataBaseRoom.getDatabase(context!!).diarioDao()
 
         capturaData(minhaView)
         capturaHora(minhaView)
@@ -36,16 +36,10 @@ class DiarioFragment : Fragment() {
 
         minhaView.button_diario_salvar.setOnClickListener(View.OnClickListener {
 
-            val textoDiario1: String = txt_detalhe_diario_corpo.text.toString()
-            val dataDiario1: String = txt_detalhe_diario_data.text.toString()
-            val horaDiario1: String = txt_detalhe_diario_hora.text.toString()
+            textodiario?.comrpoDoTexto = txt_detalhe_diario_corpo.text.toString()
+            textodiario?.dataDoTexto = txt_detalhe_diario_data.text.toString()
+            textodiario?.horaDoTexto = txt_detalhe_diario_hora.txt_diario_hora.toString()
 
-            Thread(Runnable {
-                val evento = TextosDoDiario(0, textoDiario1,dataDiario1,horaDiario1)
-                if (evento != null) {
-                    diarioDAO.insertAll(evento)
-                }
-            }).start()
 
             val toast: Toast = Toast.makeText(context, "salvo com sucesso", Toast.LENGTH_LONG)
             toast.setGravity(Gravity.CENTER_HORIZONTAL or Gravity.CENTER_VERTICAL, 0, 0)

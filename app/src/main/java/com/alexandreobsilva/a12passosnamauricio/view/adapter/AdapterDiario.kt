@@ -34,7 +34,7 @@ class AdapterDiario (private val context: Context, private var textoListas: Muta
         val hora = itemView.txt_recycler_hora
 
         fun bindView(textos: TextosDoDiario) {
-            corpo.text = textos.comrpoTexto
+            corpo.text = textos.comrpoDoTexto
             data.text = textos.dataDoTexto
             hora.text = textos.horaDoTexto
 
