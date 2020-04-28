@@ -22,6 +22,7 @@ class DozeconceitosFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         val minhaView = inflater.inflate(R.layout.fragment_dozeconceitos, container, false)
 
         with(minhaView.recycler_dozeconceitos) {

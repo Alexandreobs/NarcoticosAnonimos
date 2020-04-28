@@ -18,6 +18,7 @@ class MenuDeTextosFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         val minhaView = inflater.inflate(R.layout.fragment_menu_de_textos, container, false)
 
         minhaView.button_doze_passos.setOnClickListener(View.OnClickListener {
