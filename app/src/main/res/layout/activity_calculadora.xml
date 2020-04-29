@@ -12,8 +12,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="50dp"
+        android:background="@drawable/menu_botoes_estilo"
         android:text="Voltar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -27,10 +28,47 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="50dp"
-        android:hint="TextView"
+        android:gravity="center"
+        android:hint="Dias"
+        android:textColor="@color/colorPreta"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/inputDataCalculadora" />
+
+    <TextView
+        android:id="@+id/textResultadoCalculadoraMes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:gravity="center"
+        android:hint="Mês"
+        android:textColor="@color/colorPreta"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textResultadoCalculadora" />
+
+    <TextView
+        android:id="@+id/textResultadoCalculadoraAno"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:gravity="center"
+        android:hint="Anos"
+        android:textColor="@color/colorPreta"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textResultadoCalculadoraMes" />
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputDataCalculadora"
@@ -41,38 +79,48 @@
         android:layout_marginEnd="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textResultadoCalculadora">
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputDataCalculadora2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="hint"
-            />
+            android:gravity="center"
+            android:hint="Formato da Data DD/MM/AAAA"
+            android:inputType="date"
+            android:textColor="@color/colorPreta"
+            android:textColorHint="@color/colorVermelha" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
 
-        android:clickable="true"
         android:id="@+id/buttonCalcular"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="50dp"
+        android:background="@drawable/menu_botoes_estilo"
+        android:clickable="true"
         android:text="calcular"
+        android:textColor="@color/colorPreta"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputDataCalculadora" />
+        app:layout_constraintTop_toBottomOf="@+id/textResultadoCalculadoraAno" />
 
-    <EditText
-        android:id="@+id/editTextData"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="date"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:gravity="center"
+        android:text="Insira aqui a data de inicio"
+        android:textColor="@color/colorPreta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_calculadora_voltar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

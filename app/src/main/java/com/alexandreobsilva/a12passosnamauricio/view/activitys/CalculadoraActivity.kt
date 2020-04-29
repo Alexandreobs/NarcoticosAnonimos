@@ -5,7 +5,6 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.alexandreobsilva.a12passosnamauricio.R
 import kotlinx.android.synthetic.main.activity_calculadora.*
-import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.TimeUnit
@@ -17,12 +16,7 @@ class CalculadoraActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calculadora)
 
-        var dataAtual = pegaDataAtual()
         var dataInput = inputDataCalculadora2.text
-
-
-
-
 
 
 
@@ -30,7 +24,13 @@ class CalculadoraActivity : AppCompatActivity() {
 
             val inicialDate = SimpleDateFormat("dd/MM/yyyy").parse(dataInput.toString())
             val diff = getDateDiff(inicialDate, Date(), TimeUnit.DAYS)
-            textResultadoCalculadora.setText(diff.toString())
+            val mes = getDateDiff(inicialDate, Date(), TimeUnit.MILLISECONDS) / (1000*60*60*24) / 29
+            val ano = getDateDiff(inicialDate, Date(), TimeUnit.DAYS) / 365
+
+
+            textResultadoCalculadora.setText(diff.toString() + " Dias de Vitória")
+            textResultadoCalculadoraMes.setText(mes.toString() + " Meses de Vitória")
+            textResultadoCalculadoraAno.setText(ano.toString() + " Anos de Vitória")
 
         })
 
@@ -44,13 +44,6 @@ class CalculadoraActivity : AppCompatActivity() {
     fun getDateDiff(date1: Date, date2: Date, timeUnit: TimeUnit): Long {
         val diffInMillies = date2.time - date1.time
         return timeUnit.convert(diffInMillies, TimeUnit.MILLISECONDS)
-    }
-
-    private fun pegaDataAtual(): String {
-        val date = Date()
-        val formataData = SimpleDateFormat("dd/MM/yyyy")
-        val dataAtual = formataData.format(date)
-        return dataAtual
     }
 
 }
