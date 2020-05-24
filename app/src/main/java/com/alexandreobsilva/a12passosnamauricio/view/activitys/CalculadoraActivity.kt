@@ -3,6 +3,7 @@ package com.alexandreobsilva.a12passosnamauricio.view.activitys
 import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.app.Dialog
+import android.content.DialogInterface
 import android.graphics.Color
 import android.os.Bundle
 import android.util.TypedValue
@@ -29,8 +30,8 @@ class CalculadoraActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calculadora)
 
-        var dataInput = inputDataCalculadora2.text
 
+        var dataInput = inputDataCalculadora2.text
 
 
         mCustomTitleDate = findViewById(R.id.buttonPegaData)
@@ -81,6 +82,7 @@ class CalculadoraActivity : AppCompatActivity() {
                 month,
                 day
             )
+
             val textView = TextView(activity)
 
             val layoutParams = RelativeLayout.LayoutParams(
@@ -98,11 +100,21 @@ class CalculadoraActivity : AppCompatActivity() {
 
             datePickerDialog.setCustomTitle(textView)
 
+
+
             return datePickerDialog
         }
 
         override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMoth: Int) {
 
+            val builder = AlertDialog.Builder(requireContext())
+            builder.apply {
+                setPositiveButton(R.string.texto_OK,
+                    DialogInterface.OnClickListener { dialog, id ->
+                        // User clicked OK button
+                    })
+
+            }
         }
     }
 }

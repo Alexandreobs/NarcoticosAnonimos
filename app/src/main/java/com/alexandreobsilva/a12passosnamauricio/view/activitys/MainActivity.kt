@@ -3,19 +3,25 @@ package com.alexandreobsilva.a12passosnamauricio.view.activitys
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import com.alexandreobsilva.a12passosnamauricio.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.alexandreobsilva.a12passosnamauricio.view.fragments.*
+import kotlinx.android.synthetic.main.toolbar_personalizada.*
 
 
 class MainActivity : AppCompatActivity() {
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         loadFragment(MenuDeTextosFragment())
+
+//        onCreateOptionsMenu()
+
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
         navView.setOnNavigationItemSelectedListener {
