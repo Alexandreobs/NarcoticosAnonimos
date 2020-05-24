@@ -9,6 +9,8 @@
 
 
     </style>
+    
+    <style name="FlatButton." parent="Widget.AppCompat.Button.Borderless"></style>
 
 </resources>
 

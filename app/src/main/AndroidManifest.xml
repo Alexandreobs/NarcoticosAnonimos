@@ -9,11 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.activitys.DetalheDiarioActivity"></activity>
+
+        <activity android:name=".view.activitys.DetalheDiarioActivity" />
         <activity android:name=".view.activitys.CalculadoraActivity" />
-            <activity android:name=".view.activitys.DetalheActivity" />
-              <activity
-            android:name=".view.activitys.MainActivity">
+        <activity android:name=".view.activitys.DetalheActivity" />
+        <activity android:name=".view.activitys.MainActivity" />
+            <activity android:name=".view.activitys.TelaDeLoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
