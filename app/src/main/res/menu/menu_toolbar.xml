@@ -2,15 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:title="arquivos do diario"
+    <item android:title="Arquivos do diário"
         android:id="@+id/bt_arquivo_diario"
-        app:showAsAction="always"/>
-
-    <item android:title="logout"
-        android:id="@+id/bt_logout"/>
+        />
 
     <item android:title="teste"
-        android:id="@+id/testetestett"/>
+        android:id="@+id/testetestett"
+        />
 
-
+    <item android:title="logout"
+        android:id="@+id/bt_logout"
+        />
 </menu>

@@ -11,12 +11,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".view.activitys.DetalheDiarioActivity"></activity>
         <activity android:name=".view.activitys.CalculadoraActivity" />
-        <activity android:name=".view.activitys.TesteActivity" />
-        <activity android:name=".view.activitys.DetalheActivity" />
-        <activity android:name=".dozepassosActivity" />
-        <activity
-            android:name=".view.activitys.MainActivity"
-            android:label="@string/app_name">
+            <activity android:name=".view.activitys.DetalheActivity" />
+              <activity
+            android:name=".view.activitys.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

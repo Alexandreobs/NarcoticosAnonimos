@@ -4,7 +4,7 @@
     <item
         android:id="@+id/btm_menu_de_botoes"
         android:icon="@drawable/livro_aberto"
-        android:title="TEXTOS" />
+        android:title="Textos" />
 
     <item
         android:id="@+id/btn_linksUteis"
@@ -14,7 +14,7 @@
     <item
         android:id="@+id/btn_diario"
         android:icon="@drawable/livro_com_lapis"
-        android:title="Diario" />
+        android:title="Diário" />
 
     <item
         android:id="@+id/btn_calculadora"
