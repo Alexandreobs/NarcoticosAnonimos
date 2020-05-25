@@ -7,6 +7,7 @@
     android:background="@drawable/layout_view_login"
     tools:context=".view.activitys.TelaDeLoginActivity">
 
+
     <View
         android:id="@+id/view"
         android:layout_width="0dp"
@@ -15,7 +16,7 @@
         android:layout_marginTop="100dp"
         android:layout_marginEnd="44dp"
         android:layout_marginBottom="20dp"
-        android:background="@color/colorBranca"
+        android:background="@drawable/imagem_redonda"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -24,15 +25,15 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/bt_loginregistrar_nova_conta"
+        android:id="@+id/bt_login_registrar_nova_conta"
         style="@style/FlatButton."
         android:layout_width="123dp"
         android:layout_height="65dp"
-        android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:text="Registara nova conta"
+        android:text="Registrar nova conta"
         app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view" />
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view" />
 
     <Button
         android:id="@+id/bt_login_logar"
@@ -57,7 +58,6 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="50dp"
-
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/TIL_login_email"
         app:layout_constraintEnd_toEndOf="parent"
@@ -107,5 +107,6 @@
 
             />
     </com.google.android.material.textfield.TextInputLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

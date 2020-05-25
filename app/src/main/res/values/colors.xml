@@ -17,8 +17,9 @@
     <color name="secondaryDarkColor">#0000ca</color>
     <color name="primaryTextColor">#ffffff</color>
     <color name="secondaryTextColor">#ffffff</color>
-
-
+    <color name="ColorBlueGoogle">#4285F4</color>
+    <color name="lilas_claro">#7200ca</color>
+    <color name="lilas_escuro">#ce93d8</color>
 
 
 </resources>
