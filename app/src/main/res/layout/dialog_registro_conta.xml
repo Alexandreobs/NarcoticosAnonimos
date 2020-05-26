@@ -146,15 +146,4 @@
         app:layout_constraintStart_toStartOf="@+id/view2"
         app:layout_constraintTop_toBottomOf="@+id/view2" />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/til_dialog_senha_1"
-        app:layout_constraintEnd_toEndOf="@+id/view2"
-        app:layout_constraintStart_toEndOf="@+id/til_dialog_idade"
-        app:layout_constraintTop_toBottomOf="@+id/til_dialog_email_confirma" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

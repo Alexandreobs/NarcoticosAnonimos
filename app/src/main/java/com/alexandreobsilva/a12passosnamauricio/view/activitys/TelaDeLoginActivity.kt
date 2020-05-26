@@ -1,22 +1,22 @@
 package com.alexandreobsilva.a12passosnamauricio.view.activitys
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.widget.ArrayAdapter
 import android.widget.Button
-import android.widget.EditText
-import android.widget.Spinner
 import androidx.appcompat.app.AlertDialog
-import androidx.core.view.LayoutInflaterCompat
-import androidx.core.view.ViewCompat
+import androidx.appcompat.app.AppCompatActivity
 import com.alexandreobsilva.a12passosnamauricio.R
+import com.alexandreobsilva.a12passosnamauricio.viewmodel.CadastroViewlModel
+import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import kotlinx.android.synthetic.main.activity_tela_de_login.*
 
+
 class TelaDeLoginActivity : AppCompatActivity() {
+
+    lateinit var cadastroViewlModel: CadastroViewlModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +24,10 @@ class TelaDeLoginActivity : AppCompatActivity() {
 
         logar()
         regitrarNovaConta()
+
+
     }
+
 
     private fun regitrarNovaConta() {
         bt_login_registrar_nova_conta.setOnClickListener {
@@ -55,7 +58,8 @@ class TelaDeLoginActivity : AppCompatActivity() {
             dialogView.findViewById<TextInputEditText>(R.id.et_dialog_email_confirma)
         val idade = dialogView.findViewById<TextInputEditText>(R.id.et_dialog_idade)
         val senha1 = dialogView.findViewById<TextInputEditText>(R.id.et_dialog_senha_1)
-        val senhaConfimra = dialogView.findViewById<TextInputEditText>(R.id.et_dialog_senha_confirma)
+        val senhaConfimra =
+            dialogView.findViewById<TextInputEditText>(R.id.et_dialog_senha_confirma)
 
         val til_email1 = dialogView.findViewById<TextInputLayout>(R.id.til_dialog_email_1)
         val til_emailConfirma =
@@ -65,46 +69,30 @@ class TelaDeLoginActivity : AppCompatActivity() {
         val til_senhaConfirma =
             dialogView.findViewById<TextInputLayout>(R.id.til_dialog_senha_confirma)
 
+        lateinit var cadastroViewlModel: CadastroViewlModel
+
+
+
         cadastrarBtn.setOnClickListener {
-            if (email1.text.toString().isEmpty()) {
-                til_email1.isErrorEnabled = true
-                til_email1.error = ("Favor preencher o Campo")
-            } else {
-                til_email1.isErrorEnabled = false
-            }
 
-            if (emailConfirma.text.toString().isEmpty()) {
-                til_emailConfirma.isErrorEnabled = true
-                til_emailConfirma.error = ("Favor preencher o Campo")
-            } else {
-                 til_emailConfirma.isErrorEnabled = false
-            }
+            var emailS: String = emailConfirma.text.toString()
+            var senhaS: String = senhaConfimra.text.toString()
 
-            if (idade.text.toString().isEmpty()) {
-                til_idade.isCounterEnabled = true
-                til_idade.error = ("Favor preencher o Campo")
-            } else {
-                til_idade.isErrorEnabled = false
-            }
+            validaCampos(
+                email1,
+                til_email1,
+                emailConfirma,
+                til_emailConfirma,
+                idade,
+                til_idade,
+                senha1,
+                til_senha1,
+                senhaConfimra,
+                til_senhaConfirma
+            )
 
-            if (senha1.text.toString().isEmpty()) {
-                til_senha1.isCounterEnabled = true
-                til_senha1.error = ("Favor preencher o Campo")
-            } else {
-                til_senha1.isErrorEnabled = false
-            }
-
-            if (senhaConfimra.text.toString().isEmpty()) {
-                til_senhaConfirma.isCounterEnabled = true
-                til_senhaConfirma.error = ("Favor preencher o Campo")
-            }else{
-                til_senhaConfirma.isErrorEnabled = false
-            }
-
+            cadastroViewlModel.registrar(emailS, senhaS)
         }
-
-
-
 
 
         sairBtn.setOnClickListener {
@@ -115,6 +103,65 @@ class TelaDeLoginActivity : AppCompatActivity() {
         dialoBuilder.show()
 
 
+    }
+
+    private fun validaCampos(
+        email1: TextInputEditText,
+        til_email1: TextInputLayout,
+        emailConfirma: TextInputEditText,
+        til_emailConfirma: TextInputLayout,
+        idade: TextInputEditText,
+        til_idade: TextInputLayout,
+        senha1: TextInputEditText,
+        til_senha1: TextInputLayout,
+        senhaConfimra: TextInputEditText,
+        til_senhaConfirma: TextInputLayout
+    ) {
+        if (email1.text.toString().isEmpty()) {
+            til_email1.isErrorEnabled = true
+            til_email1.error = ("Favor preencher o Campo")
+        } else {
+            til_email1.isErrorEnabled = false
+        }
+
+        if (emailConfirma.text.toString().isEmpty()) {
+            til_emailConfirma.isErrorEnabled = true
+            til_emailConfirma.error = ("Favor preencher o Campo")
+        } else {
+            til_emailConfirma.isErrorEnabled = false
+        }
+
+        if (idade.text.toString().isEmpty()) {
+            til_idade.isErrorEnabled = true
+            til_idade.error = ("Favor preencher o Campo")
+        } else {
+            til_idade.isErrorEnabled = false
+        }
+
+        if (senha1.text.toString().isEmpty()) {
+            til_senha1.isErrorEnabled = true
+            til_senha1.error = ("Favor preencher o Campo")
+        } else {
+            til_senha1.isErrorEnabled = false
+        }
+
+        if (senhaConfimra.text.toString().isEmpty()) {
+            til_senhaConfirma.isErrorEnabled = true
+            til_senhaConfirma.error = ("Favor preencher o Campo")
+        } else {
+            til_senhaConfirma.isErrorEnabled = false
+        }
+
+        if (!emailConfirma.text.toString()
+                .equals(email1.text.toString()) || !senhaConfimra.text.toString()
+                .equals(senha1.text.toString())
+        ) {
+            til_emailConfirma.isErrorEnabled = true
+            til_emailConfirma.error = ("Os E-mails ou senhas estão diferentes")
+            til_senhaConfirma.error = ("As senhas ou emails estão diferentes")
+        } else {
+            til_emailConfirma.isErrorEnabled = false
+        }
     }
 
 

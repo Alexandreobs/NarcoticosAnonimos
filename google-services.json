@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "673582422525",
+    "firebase_url": "https://vitoria-aninoma.firebaseio.com",
+    "project_id": "vitoria-aninoma",
+    "storage_bucket": "vitoria-aninoma.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:673582422525:android:afb3b68b3bdee005522194",
+        "android_client_info": {
+          "package_name": "com.alexandreobsilva.a12passosnamauricio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "673582422525-39smqt7vchlimadft63cqf32brk5tu59.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alexandreobsilva.a12passosnamauricio",
+            "certificate_hash": "59128fef4dcbd753ed9b84e0e77496d889af7235"
+          }
+        },
+        {
+          "client_id": "673582422525-f8n4lkc8t4r3nrtqc7mqrb12muobrjci.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCD1FJ1nKBM0jG1XmxwzvzCaKeoo3b3Vn8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "673582422525-f8n4lkc8t4r3nrtqc7mqrb12muobrjci.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
