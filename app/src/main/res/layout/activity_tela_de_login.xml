@@ -27,9 +27,9 @@
     <Button
         android:id="@+id/bt_login_registrar_nova_conta"
         style="@style/FlatButton."
-        android:layout_width="123dp"
+        android:layout_width="0dp"
         android:layout_height="65dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:text="Registrar nova conta"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="@+id/view"

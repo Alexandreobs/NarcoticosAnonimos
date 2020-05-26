@@ -3,10 +3,12 @@ package com.alexandreobsilva.a12passosnamauricio.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.alexandreobsilva.a12passosnamauricio.AppUtil
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import io.reactivex.disposables.CompositeDisposable
+import java.security.AccessController.getContext
 
 
 class CadastroViewlModel: ViewModel() {
@@ -22,6 +24,7 @@ class CadastroViewlModel: ViewModel() {
         val firebaseAuth = FirebaseAuth.getInstance()
         firebaseAuth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener { task: Task<AuthResult> ->
+                AppUtil.salvarIdUsuario(getContext(), FirebaseAuth.getInstance().getCurrentUser()!!.getUid());
 
                 // seta o loading para true para dar feedback ao uauário, que terminou o cadastro
                 isLoading.setValue(false)
