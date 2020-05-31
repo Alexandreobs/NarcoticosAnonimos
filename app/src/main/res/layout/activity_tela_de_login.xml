@@ -107,5 +107,46 @@
             />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="25dp"
+        android:background="@color/ColorBlueGoogle"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/bt_login_logar"
+        app:layout_constraintTop_toBottomOf="@+id/bt_login_logar" />
+
+    <Button
+        android:id="@+id/bt_login_google"
+        android:layout_width="44dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/common_google_signin_btn_icon_dark"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/font_roboto"
+        android:text="FAÇA LOGIN COM O GOOGLE"
+        android:textColor="@color/colorBranca"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintStart_toEndOf="@+id/bt_login_google"
+        app:layout_constraintTop_toTopOf="@+id/view3"
+        app:layout_constraintVertical_bias="0.38" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

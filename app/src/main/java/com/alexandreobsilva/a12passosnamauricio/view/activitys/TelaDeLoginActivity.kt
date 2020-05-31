@@ -1,5 +1,7 @@
 package com.alexandreobsilva.a12passosnamauricio.view.activitys
 
+//import com.alexandreobsilva.a12passosnamauricio.viewmodel.CadastroViewlModel
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,13 +9,18 @@ import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.alexandreobsilva.a12passosnamauricio.R
-import com.alexandreobsilva.a12passosnamauricio.viewmodel.CadastroViewlModel
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import kotlinx.android.synthetic.main.activity_tela_de_login.*
 
 
 class TelaDeLoginActivity : AppCompatActivity() {
+
+    private lateinit var googleSignInClient: GoogleSignInClient
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +30,27 @@ class TelaDeLoginActivity : AppCompatActivity() {
         logar()
         regitrarNovaConta()
 
+        val gso =
+            GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build()
 
+        googleSignInClient = GoogleSignIn.getClient(this, gso);
+
+        logarComGoogle()
+
+
+    }
+
+    private fun logarComGoogle() {
+        bt_login_google.setOnClickListener {
+            signIn()
+        }
+    }
+
+    private fun signIn() {
+        val signInIntent: Intent = googleSignInClient.getSignInIntent()
+        startActivityForResult(signInIntent, Context.CONTEXT_INCLUDE_CODE)
     }
 
 
@@ -67,8 +94,7 @@ class TelaDeLoginActivity : AppCompatActivity() {
         val til_senhaConfirma =
             dialogView.findViewById<TextInputLayout>(R.id.til_dialog_senha_confirma)
 
-        lateinit var cadastroViewlModel: CadastroViewlModel
-
+//        lateinit var cadastroViewlModel: CadastroViewlModel
 
 
         cadastrarBtn.setOnClickListener {
@@ -121,10 +147,8 @@ class TelaDeLoginActivity : AppCompatActivity() {
             } else {
                 til_emailConfirma.isErrorEnabled = false
 
-                cadastroViewlModel.registrar(emailS, senhaS)
+//                cadastroViewlModel.registrar(emailS, senhaS)
             }
-
-
 
 
         }
@@ -198,6 +222,5 @@ class TelaDeLoginActivity : AppCompatActivity() {
             til_emailConfirma.isErrorEnabled = false
         }
     }
-
 
 }
