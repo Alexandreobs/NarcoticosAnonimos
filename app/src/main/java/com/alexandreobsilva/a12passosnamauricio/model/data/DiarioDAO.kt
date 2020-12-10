@@ -27,6 +27,4 @@ interface DiarioDAO {
     @Query(""" SELECT * FROM TEXTO_DIARIO
          WHERE $COLUMN_ID LIKE :query ORDER BY $COLUMN_ID """)
     fun search(query: String): LiveData<List<TextosDoDiario>>
-
-
 }

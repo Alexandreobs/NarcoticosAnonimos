@@ -30,9 +30,7 @@ class CalculadoraActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calculadora)
 
-
         var dataInput = inputDataCalculadora2.text
-
 
         mCustomTitleDate = findViewById(R.id.buttonPegaData)
         mCustomTitleDate.setOnClickListener(View.OnClickListener {
@@ -99,8 +97,6 @@ class CalculadoraActivity : AppCompatActivity() {
             textView.setBackgroundColor(Color.parseColor("#5412DC"))
 
             datePickerDialog.setCustomTitle(textView)
-
-
 
             return datePickerDialog
         }

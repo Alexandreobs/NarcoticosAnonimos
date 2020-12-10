@@ -32,9 +32,7 @@ abstract class MeuDataBaseRoom : RoomDatabase() {
         fun destroyInstance() {
             instance = null
         }
-
     }
-
 }
 
 

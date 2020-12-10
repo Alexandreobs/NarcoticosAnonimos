@@ -22,7 +22,6 @@ class TelaDeLoginActivity : AppCompatActivity() {
     private lateinit var googleSignInClient: GoogleSignInClient
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_de_login)
@@ -38,8 +37,6 @@ class TelaDeLoginActivity : AppCompatActivity() {
         googleSignInClient = GoogleSignIn.getClient(this, gso);
 
         logarComGoogle()
-
-
     }
 
     private fun logarComGoogle() {
@@ -160,8 +157,6 @@ class TelaDeLoginActivity : AppCompatActivity() {
 
         dialoBuilder.window?.setBackgroundDrawableResource(android.R.color.transparent)
         dialoBuilder.show()
-
-
     }
 
     private fun validaCampos(
@@ -222,5 +217,4 @@ class TelaDeLoginActivity : AppCompatActivity() {
             til_emailConfirma.isErrorEnabled = false
         }
     }
-
 }

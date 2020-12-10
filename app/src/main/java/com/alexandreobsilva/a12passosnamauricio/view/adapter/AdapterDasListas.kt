@@ -34,7 +34,6 @@ class AdapterDasListas(private val context: Context, private var textoListas: Mu
         fun bindView(passos: PassosTradicoesConceitos) {
             titulo.text = passos.titulo
 
-
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context,DetalheActivity::class.java)
                 intent.putExtra("Key10", passos)

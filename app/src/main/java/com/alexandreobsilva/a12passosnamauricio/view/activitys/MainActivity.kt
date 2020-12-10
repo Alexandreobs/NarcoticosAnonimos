@@ -25,7 +25,6 @@ class MainActivity : AppCompatActivity() {
         colocaToolBar()
         menuDeNavegação()
         //  supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
     }
 
     private fun menuDeNavegação() {

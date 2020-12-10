@@ -20,5 +20,4 @@ class AppUtil {
 //            return preferences.getString("UIID", "")
 //        }
     }
-
 }

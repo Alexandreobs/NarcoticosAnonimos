@@ -17,7 +17,6 @@ class DetalheActivity : AppCompatActivity() {
         text_view_detalhe_titulo.text = recebidos.titulo
         textViewDes.text = recebidos.textodetalhe
 
-
         buttonEntendi.setOnClickListener {
             finish()
         }

@@ -38,7 +38,6 @@ class AdapterDiario (private val context: Context, private var textoListas: Muta
             data.text = textos.dataDoTexto
             hora.text = textos.horaDoTexto
 
-
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context, DetalheDiarioActivity::class.java)
                 intent.putExtra("Key10", textos)
@@ -47,5 +46,4 @@ class AdapterDiario (private val context: Context, private var textoListas: Muta
             }
         }
     }
-
 }

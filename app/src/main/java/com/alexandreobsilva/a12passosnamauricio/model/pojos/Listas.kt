@@ -50,7 +50,6 @@ val listaDozePassos: MutableList<PassosTradicoesConceitos> = mutableListOf(
         "12º. Tendo experimentado um despertar espiritual, como resultado destes passos, procuramos levar esta mensagem a outros adictos e praticar estes princípios em todas as nossas atividades.",
         "adicionar"
     )
-
 )
 
 val listaDozeTradicoes: MutableList<PassosTradicoesConceitos> = mutableListOf(
@@ -103,7 +102,6 @@ val listaDozeTradicoes: MutableList<PassosTradicoesConceitos> = mutableListOf(
         "12º. O anonimato é o alicerce espiritual de todas as nossas Tradições, lembrando-nos sempre de colocar princípios acima de personalidades.",
         "adicionar"
     )
-
 )
 
 val listaDozeConceitos: MutableList<PassosTradicoesConceitos> = mutableListOf(
@@ -156,7 +154,6 @@ val listaDozeConceitos: MutableList<PassosTradicoesConceitos> = mutableListOf(
         "12º. De acordo com a natureza espiritual de Narcóticos Anônimos, nossa estrutura deve ser sempre de serviço, nunca de governo.",
         "adicionar"
     )
-
 )
 
 val listaDeOracoes: MutableList<PassosTradicoesConceitos> = mutableListOf(
@@ -247,9 +244,7 @@ val listaDeOracoes: MutableList<PassosTradicoesConceitos> = mutableListOf(
                 "\n" +
                 "AMÉM."
     )
-
 )
-
 
 val listaDeRecaidas: MutableList<PassosTradicoesConceitos> = mutableListOf(
 
@@ -301,9 +296,7 @@ val listaDeRecaidas: MutableList<PassosTradicoesConceitos> = mutableListOf(
         "12 AUSÊNCIA AOS GRUPOS",
         "AUSÊNCIA AOS GRUPOS: todas as recaídas contam a historia do abandono ou pouca frequência  a grupo de apoio. A troca de experiências é vital para fortalecer a vontade, relembrar fracassos e evita-los. Não se deve sentir tédio no programa, porque a recaída custa caro demais. Pode ser sua vida!"
     )
-
 )
-
 
 val listaDozePassosAA: MutableList<PassosTradicoesConceitos> = mutableListOf(
 
@@ -476,7 +469,6 @@ val listaDozePassosAA: MutableList<PassosTradicoesConceitos> = mutableListOf(
                 "\n" +
                 "É possível que haja uma definição de despertar espiritual para cada pessoa que o tenha experimentado. Contudo, os casos autênticos, na verdade, têm algo comum entre si. Estas coisas comuns entre eles são de fácil compreensão. Quando um homem ou uma mulher experimenta um despertar espiritual, o significado mais importante disso é que se torna capaz de fazer, sentir e acreditar em coisas como antes não podia, quando dispunha apenas de seus próprios recursos desassistidos. A dádiva recebida consiste em um novo estado de consciência e uma nova maneira de ser. Um novo caminho lhe foi indicado, conduzindo-o a um lugar determinado, onde a vida não é um beco sem saída, nem algo a ser suportado ou dominado. Foi transformado em um sentido bem real, pois lançou mão de uma fonte de força que, de um modo ou de outro, havia negado a si próprio até aqui. Encontrou-se possuindo um grau de honestidade, tolerância, dedicação, paz de espírito e amor, dos quais se supunha totalmente incapaz. O que recebeu foi um presente de graça, contudo, geralmente, pelo menos em uma pequena medida, tornou-se pronto para recebê-lo."
     )
-
 )
 
 val listaDozeAmorExigente: MutableList<PassosTradicoesConceitos> = mutableListOf(
