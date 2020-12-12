@@ -65,15 +65,31 @@
 
     <Button
         android:id="@+id/buttonEntendi"
-        android:layout_width="341dp"
-        android:layout_height="56dp"
+        android:layout_width="213dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="20dp"
         android:layout_marginBottom="40dp"
         android:background="@drawable/canto_gradiente"
         android:text="OBRIGADO"
         android:textColor="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/btn_compartilhar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/canto_gradiente_verde"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonEntendi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonEntendi"
+        app:layout_constraintTop_toTopOf="@+id/buttonEntendi"
+        app:srcCompat="?attr/actionModeShareDrawable" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
