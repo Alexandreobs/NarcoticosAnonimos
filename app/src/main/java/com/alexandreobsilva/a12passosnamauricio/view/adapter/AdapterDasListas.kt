@@ -24,7 +24,6 @@ class AdapterDasListas(private val context: Context, private var textoListas: Mu
 
     override fun onBindViewHolder(holder: AdapterDasListas.GameViewHolder, position: Int) {
         holder.bindView(textoListas[position])
-
     }
 
     class GameViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -36,9 +35,8 @@ class AdapterDasListas(private val context: Context, private var textoListas: Mu
 
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context,DetalheActivity::class.java)
-                intent.putExtra("Key10", passos)
+                intent.putExtra("chaveDoAdapter", passos)
                 itemView.context.startActivity(intent)
-
             }
         }
     }

@@ -30,14 +30,14 @@ class DetalheActivity : AppCompatActivity() {
     }
 
     fun recebeAsParadas(){
-        val recebidos = intent.extras?.getSerializable("Key10") as PassosTradicoesConceitos
+        val recebidos = intent.extras?.getSerializable("chaveDoAdapter") as PassosTradicoesConceitos
         text_view_detalhe_titulo.text = recebidos.titulo
         textViewDes.text = recebidos.textodetalhe
 
     }
 
     fun copartilharTextos() {
-      val recebidos = intent.extras?.getSerializable("Key10") as PassosTradicoesConceitos
+      val recebidos = intent.extras?.getSerializable("chaveDoAdapter") as PassosTradicoesConceitos
         val text1 = recebidos.textodetalhe
         val text2 = recebidos.titulo
 
