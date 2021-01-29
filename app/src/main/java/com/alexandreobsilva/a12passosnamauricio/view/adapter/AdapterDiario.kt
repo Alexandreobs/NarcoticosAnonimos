@@ -12,22 +12,22 @@ import com.alexandreobsilva.a12passosnamauricio.view.activitys.DetalheDiarioActi
 import kotlinx.android.synthetic.main.item_recycler_diario.view.*
 
 class AdapterDiario (private val context: Context, private var textoListas: MutableList<TextosDoDiario>) :
-    RecyclerView.Adapter<AdapterDiario.GameViewHolder>() {
+    RecyclerView.Adapter<AdapterDiario.AnotacaoDiarioViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterDiario.GameViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterDiario.AnotacaoDiarioViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.item_recycler_diario, parent, false)
 
-        return GameViewHolder(view)
+        return AnotacaoDiarioViewHolder(view)
     }
 
     override fun getItemCount(): Int = textoListas.size
 
-    override fun onBindViewHolder(holder: AdapterDiario.GameViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: AdapterDiario.AnotacaoDiarioViewHolder, position: Int) {
         holder.bindView(textoListas[position])
 
     }
 
-    class GameViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class AnotacaoDiarioViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val corpo = itemView.txt_recycler_previa
         val data = itemView.txt_recycler_data
