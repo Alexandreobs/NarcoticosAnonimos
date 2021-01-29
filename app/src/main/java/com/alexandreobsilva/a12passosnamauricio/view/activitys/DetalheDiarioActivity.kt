@@ -12,7 +12,7 @@ class DetalheDiarioActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detalhe_diario)
 
-        val recebidos = intent.extras?.getSerializable("Key10") as TextosDoDiario
+        val recebidos = intent.extras?.getSerializable("chaveDoAdapter") as TextosDoDiario
 
         txt_detalhe_diario_corpo.text = recebidos.comrpoDoTexto
         txt_detalhe_diario_data.text = recebidos.dataDoTexto
