@@ -7,12 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.alexandreobsilva.a12passosnamauricio.R
-import kotlinx.android.synthetic.main.fragment_dozetradicoes.view.*
-import com.alexandreobsilva.a12passosnamauricio.model.pojos.listaDozeTradicoes
+import kotlinx.android.synthetic.main.fragment_dozepassos.view.*
+import com.alexandreobsilva.a12passosnamauricio.model.pojos.listaDozePassos
 import com.alexandreobsilva.a12passosnamauricio.view.adapter.AdapterDasListas
 
 
-class DozetradicoesFragment : Fragment() {
+class DozePassosFragment : Fragment() {
 
     lateinit var adapterDasListas: AdapterDasListas
 
@@ -20,16 +20,17 @@ class DozetradicoesFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val minhaView = inflater.inflate(R.layout.fragment_dozetradicoes, container, false)
+        val minhaView = inflater.inflate(R.layout.fragment_dozepassos, container, false)
 
-        with(minhaView.recycler_dozetradicoes) {
-            adapter = AdapterDasListas(context, listaDozeTradicoes)
+        with(minhaView.recycler_dozepassos) {
+            adapter = AdapterDasListas(context, listaDozePassos)
             layoutManager = LinearLayoutManager(
-                    context,
-                    LinearLayoutManager.VERTICAL,
-                    false
-                )
+                context,
+                LinearLayoutManager.VERTICAL,
+                false
+            )
         }
-        return minhaView
+       return minhaView
     }
 }
+

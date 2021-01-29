@@ -24,21 +24,21 @@ class MenuDeTextosFragment : Fragment() {
         minhaView.button_doze_passos.setOnClickListener(View.OnClickListener {
             val manager: FragmentManager? = fragmentManager
             val transaction: FragmentTransaction = manager!!.beginTransaction()
-            transaction.replace(R.id.nav_host_fragment, DozepassosFragment())
+            transaction.replace(R.id.nav_host_fragment, DozePassosFragment())
             transaction.commit()
         })
 
         minhaView.button_doze_conceitos.setOnClickListener(View.OnClickListener {
             val manager: FragmentManager? = fragmentManager
             val transaction: FragmentTransaction = manager!!.beginTransaction()
-            transaction.replace(R.id.nav_host_fragment, DozeconceitosFragment())
+            transaction.replace(R.id.nav_host_fragment, DozeConceitosFragment())
             transaction.commit()
         })
 
         minhaView.button_doze_tradicoes.setOnClickListener(View.OnClickListener {
             val manager: FragmentManager? = fragmentManager
             val transaction: FragmentTransaction = manager!!.beginTransaction()
-            transaction.replace(R.id.nav_host_fragment, DozetradicoesFragment())
+            transaction.replace(R.id.nav_host_fragment, DozeTradicoesFragment())
             transaction.commit()
         })
 

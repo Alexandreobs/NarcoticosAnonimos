@@ -13,7 +13,7 @@ import com.alexandreobsilva.a12passosnamauricio.model.pojos.listaDozeConceitos
 import com.alexandreobsilva.a12passosnamauricio.view.adapter.AdapterDasListas
 
 
-class DozeconceitosFragment : Fragment() {
+class DozeConceitosFragment : Fragment() {
 
     lateinit var adapterDasListas: AdapterDasListas
 
