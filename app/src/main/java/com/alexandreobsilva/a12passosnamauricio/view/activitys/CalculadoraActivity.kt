@@ -9,10 +9,7 @@ import android.os.Bundle
 import android.util.TypedValue
 import android.view.Gravity
 import android.view.View
-import android.widget.Button
-import android.widget.DatePicker
-import android.widget.RelativeLayout
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
 import com.alexandreobsilva.a12passosnamauricio.R
@@ -55,7 +52,6 @@ class CalculadoraActivity : AppCompatActivity() {
 
         button_calculadora_voltar.setOnClickListener(View.OnClickListener {
             finish()
-
         })
     }
 
@@ -109,7 +105,6 @@ class CalculadoraActivity : AppCompatActivity() {
                     DialogInterface.OnClickListener { dialog, id ->
                         // User clicked OK button
                     })
-
             }
         }
     }
