@@ -10,13 +10,13 @@ interface DiarioDAO {
 
 
     @Insert
-    fun insertAll(vararg textos: TextosDoDiario): Long
+    fun insertAll(vararg textos: TextosDoDiario)
 
     @Update
-    fun update(texto: TextosDoDiario): Int
+    fun update(texto: TextosDoDiario)
 
     @Delete
-    fun delete(vararg texto: TextosDoDiario): Int
+    fun delete(vararg texto: TextosDoDiario)
 
     @Query("SELECT * FROM TEXTO_DIARIO")
     fun getAll(): List<TextosDoDiario>

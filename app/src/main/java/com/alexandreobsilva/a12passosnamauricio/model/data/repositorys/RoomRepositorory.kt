@@ -13,8 +13,7 @@ class RoomRepositorory(
 
     override fun save(textos: TextosDoDiario) {
         if (textos.id == 0L) {
-            val id = DiarioDAO.insertAll(textos)
-            textos.id = id
+            DiarioDAO.insertAll(textos)
         } else {
             DiarioDAO.update(textos)
         }

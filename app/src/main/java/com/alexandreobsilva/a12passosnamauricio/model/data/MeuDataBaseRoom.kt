@@ -24,6 +24,7 @@ abstract class MeuDataBaseRoom : RoomDatabase() {
                     NOME_BANCO_DE_DADOS
                 )
                     .allowMainThreadQueries()
+                    .fallbackToDestructiveMigration()
                     .build()
             }
             return instance as MeuDataBaseRoom

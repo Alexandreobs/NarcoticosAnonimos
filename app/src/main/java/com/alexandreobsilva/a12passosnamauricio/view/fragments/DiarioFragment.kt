@@ -12,14 +12,19 @@ import androidx.fragment.app.FragmentTransaction
 import com.alexandreobsilva.a12passosnamauricio.R
 import com.alexandreobsilva.a12passosnamauricio.model.data.DiarioDAO
 import com.alexandreobsilva.a12passosnamauricio.model.data.MeuDataBaseRoom
+import com.alexandreobsilva.a12passosnamauricio.model.data.repositorys.RoomRepositorory
 import com.alexandreobsilva.a12passosnamauricio.model.pojos.TextosDoDiario
-import kotlinx.android.synthetic.main.activity_detalhe_diario.*
+import kotlinx.android.synthetic.main.fragment_diario.*
 import kotlinx.android.synthetic.main.fragment_diario.view.*
 import java.text.SimpleDateFormat
 import java.util.*
 
 
 class DiarioFragment : Fragment() {
+
+    private val repository: RoomRepositorory by lazy {
+        RoomRepositorory(MeuDataBaseRoom.getDatabase(requireContext()))
+    }
 
     lateinit var diarioDAO: DiarioDAO
     private var textodiario: TextosDoDiario? = null
@@ -35,16 +40,15 @@ class DiarioFragment : Fragment() {
         botaoAcesssoArquivoDiario(minhaView)
 
         minhaView.button_diario_salvar.setOnClickListener(View.OnClickListener {
+            textodiario = TextosDoDiario()
 
-            textodiario?.comrpoDoTexto = txt_detalhe_diario_corpo.text.toString()
-            textodiario?.dataDoTexto = txt_detalhe_diario_data.text.toString()
-            textodiario?.horaDoTexto = txt_detalhe_diario_hora.txt_diario_hora.toString()
+            textodiario?.comrpoDoTexto = conteudo.text.toString()
+            textodiario?.dataDoTexto = txt_diario_data.text.toString()
+            textodiario?.horaDoTexto = txt_diario_hora.text.toString()
 
+            textodiario?.let { repository.save(it) }
 
-            val toast: Toast = Toast.makeText(context, "salvo com sucesso", Toast.LENGTH_LONG)
-            toast.setGravity(Gravity.CENTER_HORIZONTAL or Gravity.CENTER_VERTICAL, 0, 0)
-            toast.show()
-
+            Toast.makeText(context, "salvo com sucesso", Toast.LENGTH_LONG).show()
         })
 
         return minhaView
