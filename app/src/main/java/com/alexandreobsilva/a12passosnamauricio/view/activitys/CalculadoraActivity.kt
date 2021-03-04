@@ -8,7 +8,6 @@ import android.graphics.Color
 import android.os.Bundle
 import android.util.TypedValue
 import android.view.Gravity
-import android.view.View
 import android.widget.Button
 import android.widget.DatePicker
 import android.widget.RelativeLayout
@@ -17,10 +16,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
 import com.alexandreobsilva.a12passosnamauricio.R
 import kotlinx.android.synthetic.main.activity_calculadora.*
-import java.text.SimpleDateFormat
+import org.joda.time.*
+import org.joda.time.format.DateTimeFormat
 import java.util.*
-import java.util.concurrent.TimeUnit
-
 
 class CalculadoraActivity : AppCompatActivity() {
 
@@ -30,38 +28,31 @@ class CalculadoraActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calculadora)
 
-        var dataInput = inputDataCalculadora2.text
-
         mCustomTitleDate = findViewById(R.id.buttonPegaData)
-        mCustomTitleDate.setOnClickListener(View.OnClickListener {
+        mCustomTitleDate.setOnClickListener {
             val fragment: DialogFragment = CustomDatePickerFragment()
             fragment.show(supportFragmentManager, "Data Picker")
-        })
+        }
 
-        buttonCalcular.setOnClickListener(View.OnClickListener {
-
-            val inicialDate = SimpleDateFormat("dd/MM/yyyy").parse(dataInput.toString())
-
-            val diff = getDateDiff(inicialDate, Date(), TimeUnit.DAYS)
-            val mes =
-                getDateDiff(inicialDate, Date(), TimeUnit.MILLISECONDS) / (1000 * 60 * 60 * 24) / 29
-            val ano = getDateDiff(inicialDate, Date(), TimeUnit.DAYS) / 365
-
-            textResultadoCalculadora.setText(diff.toString() + " Dias de Vitória")
-            textResultadoCalculadoraMes.setText(mes.toString() + " Meses de Vitória")
-            textResultadoCalculadoraAno.setText(ano.toString() + " Anos de Vitória")
-
-        })
-
-        button_calculadora_voltar.setOnClickListener(View.OnClickListener {
-            finish()
-
-        })
+        buttonCalcular.setOnClickListener { calcular() }
+        button_calculadora_voltar.setOnClickListener { finish() }
     }
 
-    fun getDateDiff(date1: Date, date2: Date, timeUnit: TimeUnit): Long {
-        val diffInMillies = date2.time - date1.time
-        return timeUnit.convert(diffInMillies, TimeUnit.MILLISECONDS)
+    private fun calcular() {
+        val dataInicial = inputDataCalculadora2.text.toString()
+
+        val formatter = DateTimeFormat.forPattern("dd/MM/yyyy")
+        val dataInicialDate = formatter.parseLocalDate(dataInicial) ?: return
+        val dataFinalDate = LocalDate()
+
+        val dias = Days.daysBetween(dataInicialDate, dataFinalDate).days
+        val semanas = Weeks.weeksBetween(dataInicialDate, dataFinalDate).weeks
+        val meses = Months.monthsBetween(dataInicialDate, dataFinalDate).months
+        val anos = Years.yearsBetween(dataInicialDate, dataFinalDate).years
+
+        textResultadoCalculadora.text = resources.getQuantityString(R.plurals.dias_vitoria, dias, dias)
+        textResultadoCalculadoraMes.text = resources.getQuantityString(R.plurals.meses_vitoria, meses, meses)
+        textResultadoCalculadoraAno.text = resources.getQuantityString(R.plurals.anos_vitoria, anos, anos)
     }
 
     class CustomDatePickerFragment : DialogFragment(), DatePickerDialog.OnDateSetListener {

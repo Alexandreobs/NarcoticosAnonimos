@@ -5,6 +5,20 @@
     <string name="texto_Explicatido_Diario">Escreva aqui</string>
     <string name="texto_OK">OKKK</string>
 
+    <plurals name="dias_vitoria">
+        <item quantity="one">%d dia de vitória</item>
+        <item quantity="other">%d dias de vitória</item>
+    </plurals>
+
+    <plurals name="meses_vitoria">
+        <item quantity="one">%d mês de vitória</item>
+        <item quantity="other">%d meses de vitória</item>
+    </plurals>
+
+    <plurals name="anos_vitoria">
+        <item quantity="one">%d ano de vitória</item>
+        <item quantity="other">%d anos de vitória</item>
+    </plurals>
 
 </resources>
 
