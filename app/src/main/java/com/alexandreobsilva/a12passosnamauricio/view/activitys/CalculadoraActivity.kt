@@ -100,7 +100,6 @@ class CalculadoraActivity : AppCompatActivity() {
                     DialogInterface.OnClickListener { dialog, id ->
                         // User clicked OK button
                     })
-
             }
         }
     }
