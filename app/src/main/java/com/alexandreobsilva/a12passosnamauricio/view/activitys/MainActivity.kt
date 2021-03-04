@@ -75,7 +75,6 @@ class MainActivity : AppCompatActivity() {
     private fun loadFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.nav_host_fragment, fragment)
-        transaction.addToBackStack(null)
         transaction.commit()
     }
 }

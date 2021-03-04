@@ -25,6 +25,7 @@ class MenuDeTextosFragment : Fragment() {
             val manager: FragmentManager? = fragmentManager
             val transaction: FragmentTransaction = manager!!.beginTransaction()
             transaction.replace(R.id.nav_host_fragment, DozePassosFragment())
+            transaction.addToBackStack("dozePassos")
             transaction.commit()
         })
 
@@ -32,6 +33,7 @@ class MenuDeTextosFragment : Fragment() {
             val manager: FragmentManager? = fragmentManager
             val transaction: FragmentTransaction = manager!!.beginTransaction()
             transaction.replace(R.id.nav_host_fragment, DozeConceitosFragment())
+            transaction.addToBackStack("dozeConceitos")
             transaction.commit()
         })
 
@@ -39,6 +41,7 @@ class MenuDeTextosFragment : Fragment() {
             val manager: FragmentManager? = fragmentManager
             val transaction: FragmentTransaction = manager!!.beginTransaction()
             transaction.replace(R.id.nav_host_fragment, DozeTradicoesFragment())
+            transaction.addToBackStack("dozeTradicoes")
             transaction.commit()
         })
 
@@ -46,6 +49,7 @@ class MenuDeTextosFragment : Fragment() {
             val manager: FragmentManager? = fragmentManager
             val transaction: FragmentTransaction = manager!!.beginTransaction()
             transaction.replace(R.id.nav_host_fragment, OrarFragment())
+            transaction.addToBackStack("orar")
             transaction.commit()
         })
 
@@ -53,6 +57,7 @@ class MenuDeTextosFragment : Fragment() {
             val manager: FragmentManager? = fragmentManager
             val transaction: FragmentTransaction = manager!!.beginTransaction()
             transaction.replace(R.id.nav_host_fragment, DozePassosRecaidaFragment())
+            transaction.addToBackStack("dozePassosRecaida")
             transaction.commit()
         })
 
@@ -60,6 +65,7 @@ class MenuDeTextosFragment : Fragment() {
             val manager: FragmentManager? = fragmentManager
             val transaction: FragmentTransaction = manager!!.beginTransaction()
             transaction.replace(R.id.nav_host_fragment, DozePassosAAFragment())
+            transaction.addToBackStack("dozePassosAA")
             transaction.commit()
         })
 
@@ -67,6 +73,7 @@ class MenuDeTextosFragment : Fragment() {
             val manager: FragmentManager? = fragmentManager
             val transaction: FragmentTransaction = manager!!.beginTransaction()
             transaction.replace(R.id.nav_host_fragment, AmorExigenteFragment())
+            transaction.addToBackStack("amorExigente")
             transaction.commit()
         })
 
