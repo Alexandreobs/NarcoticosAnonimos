@@ -24,7 +24,11 @@ class MainActivity : AppCompatActivity() {
         loadFragment(MenuDeTextosFragment())
         colocaToolBar()
         menuDeNavegação()
-        //  supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        supportActionBar?.apply {
+            setHomeAsUpIndicator(R.drawable.ic_home_black_24dp)
+            setDisplayHomeAsUpEnabled(true)
+        }
     }
 
     private fun menuDeNavegação() {

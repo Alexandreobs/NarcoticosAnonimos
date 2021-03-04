@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name"></string>
+    <string name="app_name">Vitória Anônima</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="texto_Explicatido_Diario">Escreva aqui</string>

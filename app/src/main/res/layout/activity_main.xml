@@ -41,15 +41,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="35dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/nav_host_fragment"
-        app:layout_constraintStart_toStartOf="@+id/my_toolbar"
-        app:layout_constraintTop_toTopOf="@+id/my_toolbar"
-        app:srcCompat="@drawable/ic_home_black_24dp" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -65,7 +65,6 @@ class CalculadoraActivity : AppCompatActivity() {
 
             val datePickerDialog = DatePickerDialog(
                 requireContext(),
-                AlertDialog.THEME_HOLO_LIGHT,
                 this,
                 year,
                 month,
