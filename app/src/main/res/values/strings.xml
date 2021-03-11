@@ -10,6 +10,11 @@
         <item quantity="other">%d dias de vitória</item>
     </plurals>
 
+    <plurals name="semanas_vitoria">
+        <item quantity="one">%d semana de vitória</item>
+        <item quantity="other">%d semanas de vitória</item>
+    </plurals>
+
     <plurals name="meses_vitoria">
         <item quantity="one">%d mês de vitória</item>
         <item quantity="other">%d meses de vitória</item>

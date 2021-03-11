@@ -6,7 +6,7 @@
         android:id="@+id/bt_arquivo_diario"
         />
 
-    <item android:title="teste"
+    <item android:title="Sobre o App"
         android:id="@+id/testetestett"
         />
 

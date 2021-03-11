@@ -7,11 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.alexandreobsilva.a12passosnamauricio.R
+import com.alexandreobsilva.a12passosnamauricio.model.data.DiarioDAO
 import com.alexandreobsilva.a12passosnamauricio.model.pojos.TextosDoDiario
 import com.alexandreobsilva.a12passosnamauricio.view.activitys.DetalheDiarioActivity
 import kotlinx.android.synthetic.main.item_recycler_diario.view.*
 
-class AdapterDiario (private val context: Context, private var textoListas: MutableList<TextosDoDiario>) :
+class AdapterDiario (private val context: Context, private var arquivosDoDiario: MutableList<DiarioDAO>) :
     RecyclerView.Adapter<AdapterDiario.AnotacaoDiarioViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterDiario.AnotacaoDiarioViewHolder {
@@ -20,10 +21,10 @@ class AdapterDiario (private val context: Context, private var textoListas: Muta
         return AnotacaoDiarioViewHolder(view)
     }
 
-    override fun getItemCount(): Int = textoListas.size
+    override fun getItemCount(): Int = arquivosDoDiario.size
 
     override fun onBindViewHolder(holder: AdapterDiario.AnotacaoDiarioViewHolder, position: Int) {
-        holder.bindView(textoListas[position])
+        holder.bindView(TextosDoDiario())
 
     }
 

@@ -37,7 +37,6 @@ class DiarioFragment : Fragment() {
 
         capturaData(minhaView)
         capturaHora(minhaView)
-        botaoAcesssoArquivoDiario(minhaView)
 
         minhaView.button_diario_salvar.setOnClickListener(View.OnClickListener {
             textodiario = TextosDoDiario()
@@ -49,20 +48,17 @@ class DiarioFragment : Fragment() {
             textodiario?.let { repository.save(it) }
 
             Toast.makeText(context, "salvo com sucesso", Toast.LENGTH_LONG).show()
+
+            val manager: FragmentManager? = fragmentManager
+            val transaction: FragmentTransaction = manager!!.beginTransaction()
+            transaction.replace(R.id.nav_host_fragment, RecyclerDiarioFragment())
+            transaction.commit()
         })
 
         return minhaView
     }
 
-    private fun botaoAcesssoArquivoDiario(minhaView: View) {
-        minhaView.btn_acessar_arquivo_diario.setOnClickListener(View.OnClickListener {
-            val manager: FragmentManager? = fragmentManager
-            val transaction: FragmentTransaction = manager!!.beginTransaction()
-            transaction.replace(R.id.nav_host_fragment, RecyclerDiarioFragment())
-            transaction.commit()
 
-        })
-    }
 
     private fun capturaHora(minhaView: View) {
         val hora = Date().time

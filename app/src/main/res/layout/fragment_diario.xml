@@ -10,9 +10,9 @@
         android:id="@+id/textInputLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="2dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="2dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/button_diario_salvar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -79,33 +79,5 @@
         app:layout_constraintEnd_toEndOf="@id/textView"
         app:layout_constraintStart_toStartOf="@id/textView"
         app:layout_constraintTop_toBottomOf="@id/txt_diario_data" />
-
-    <ImageView
-        android:id="@+id/btn_acessar_arquivo_diario"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="50dp"
-        android:src="@drawable/arquivo_diario"
-        app:layout_constraintBottom_toTopOf="@id/textView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@id/textView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:text="Acessar arquivos do diario"
-        android:textColor="@color/colorPreta"
-        app:layout_constraintBottom_toTopOf="@id/textInputLayout"
-        app:layout_constraintEnd_toEndOf="@id/btn_acessar_arquivo_diario"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/btn_acessar_arquivo_diario" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

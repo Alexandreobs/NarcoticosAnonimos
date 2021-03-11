@@ -17,18 +17,14 @@
         android:id="@+id/button_calculadora_voltar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="50dp"
-        android:background="@drawable/menu_botoes_estilo"
+        android:background="@drawable/canto_gradiente"
         android:text="Voltar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonCalcular" />
+        android:textColor="@color/colorBranca"
+        app:layout_constraintEnd_toEndOf="@+id/buttonPegaData"
+        app:layout_constraintTop_toTopOf="@+id/buttonCalcular" />
 
     <TextView
-        android:id="@+id/textResultadoCalculadora"
+        android:id="@+id/textResultadoCalculadoraDias"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -44,11 +40,27 @@
         app:layout_constraintTop_toBottomOf="@+id/inputDataCalculadora" />
 
     <TextView
+        android:id="@+id/textResultadoCalculadoraSemanas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:gravity="center"
+        android:hint="Semanas"
+        android:textColor="@color/colorPreta"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textResultadoCalculadoraDias" />
+
+    <TextView
         android:id="@+id/textResultadoCalculadoraMes"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="50dp"
         android:gravity="center"
         android:hint="Mês"
@@ -57,14 +69,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textResultadoCalculadora" />
+        app:layout_constraintTop_toBottomOf="@+id/textResultadoCalculadoraSemanas" />
 
     <TextView
         android:id="@+id/textResultadoCalculadoraAno"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="50dp"
         android:gravity="center"
         android:hint="Anos"
@@ -85,14 +97,14 @@
         android:layout_marginEnd="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4">
+        app:layout_constraintTop_toBottomOf="@+id/include">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputDataCalculadora2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:hint="Formato da Data DD/MM/AAAA"
+            android:hint="Sobriedade início"
             android:inputType="date"
             android:textColor="@color/colorPreta"
             android:textColorHint="@color/colorVermelha" />
@@ -103,41 +115,30 @@
         android:id="@+id/buttonCalcular"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="50dp"
-        android:background="@drawable/menu_botoes_estilo"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/canto_gradiente"
         android:clickable="true"
         android:text="calcular"
-        android:textColor="@color/colorPreta"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textResultadoCalculadoraAno" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="50dp"
-        android:gravity="center"
-        android:text="Insira aqui a data de inicio"
-        android:textColor="@color/colorPreta"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include" />
+        android:textColor="@color/colorBranca"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/buttonPegaData" />
 
     <Button
         android:id="@+id/buttonPegaData"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Button"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/canto_gradiente"
+        android:text="Data de Início"
+        android:textColor="@color/colorBranca"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCalcular"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_calculadora_voltar" />
+        app:layout_constraintTop_toBottomOf="@+id/textResultadoCalculadoraAno"
+        app:layout_constraintVertical_bias="0.947" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

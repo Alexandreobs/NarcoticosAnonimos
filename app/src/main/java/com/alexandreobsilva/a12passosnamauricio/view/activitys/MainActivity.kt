@@ -10,6 +10,7 @@ import com.alexandreobsilva.a12passosnamauricio.R
 import com.alexandreobsilva.a12passosnamauricio.view.fragments.DiarioFragment
 import com.alexandreobsilva.a12passosnamauricio.view.fragments.MenuDeTextosFragment
 import com.alexandreobsilva.a12passosnamauricio.view.fragments.PaginaDeLinksFragment
+import com.alexandreobsilva.a12passosnamauricio.view.fragments.RecyclerDiarioFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.apply {
             setHomeAsUpIndicator(R.drawable.ic_home_black_24dp)
             setDisplayHomeAsUpEnabled(true)
+
         }
     }
 
@@ -47,7 +49,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.btn_diario -> {
-                    loadFragment(DiarioFragment())
+                    loadFragment(RecyclerDiarioFragment())
                     return@setOnNavigationItemSelectedListener true
                 }
 

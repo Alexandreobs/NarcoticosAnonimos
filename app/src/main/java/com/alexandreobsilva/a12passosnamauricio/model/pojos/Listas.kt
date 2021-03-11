@@ -243,6 +243,24 @@ val listaDeOracoes: MutableList<PassosTradicoesConceitos> = mutableListOf(
                 "Senhor, reveste-me da tua beleza, e que, no decurso deste dia, eu Te revele a todos.\n" +
                 "\n" +
                 "AMÉM."
+    ),
+
+    PassosTradicoesConceitos("Oração Para o Nosso Dia", "Senhor,\n" +
+            "no silencio deste dia que amanhece,\n" +
+            "venho pedir-Te paz , sabedoria e força \n" +
+            "Quero olhar hoje o mundo com olhos cheios de amor\n" +
+            "Ser paciente, compreensivo, manso e prudente;\n" +
+            "ver além das aparências teus filhos, como Tu mesmo os vês,\n" +
+            " E assim não ver senão o bem em cada um,\n" +
+            "Serra os meus ouvidos a toda calúnia.\n" +
+            "Guarda a minha língua de toda a maldade.\n" +
+            "Que só de bênçãos se encha o meu espírito.\n" +
+            "Que eu seja tão bondoso e alegre,\n" +
+            "que todos quantos se aproximarem de mim, sintam a tua presença.\n" +
+            "Reveste-me da tua beleza Senhor\n" +
+            "E  que  no decurso deste dia,\n" +
+            "Eu Te revele a todos.\n" +
+            "Amén"
     )
 )
 

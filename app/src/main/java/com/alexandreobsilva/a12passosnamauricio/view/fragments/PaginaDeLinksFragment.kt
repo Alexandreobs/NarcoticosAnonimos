@@ -44,5 +44,4 @@ class PaginaDeLinksFragment : Fragment() {
         i.data = Uri.parse(url)
         startActivity(i)
     }
-
 }

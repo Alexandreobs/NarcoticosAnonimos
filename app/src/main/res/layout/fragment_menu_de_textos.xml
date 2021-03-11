@@ -51,68 +51,64 @@
         app:layout_constraintTop_toBottomOf="@+id/button_doze_conceitos" />
 
     <Button
-        android:textColor="@color/colorBranca"
-        android:background="@drawable/menu_botoes_estilo"
         android:id="@+id/button_oracoes"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="30dp"
+        android:background="@drawable/menu_botoes_estilo"
         android:text="Orações"
+        android:textColor="@color/colorBranca"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_doze_tradicoes" />
+        app:layout_constraintTop_toBottomOf="@+id/button_amorExigente" />
 
     <Button
-        android:textColor="@color/colorBranca"
-        android:background="@drawable/menu_botoes_estilo"
         android:id="@+id/button_doze_recaidas"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="30dp"
+        android:background="@drawable/menu_botoes_estilo"
         android:text="Os 12 Passos Para Recaida"
+        android:textColor="@color/colorBranca"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_oracoes" />
 
     <Button
-        android:textColor="@color/colorBranca"
-        android:background="@drawable/menu_botoes_estilo"
         android:id="@+id/button_doze_passos_AA"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="30dp"
+        android:background="@drawable/menu_botoes_estilo"
         android:text="Os 12 Passos AA"
+        android:textColor="@color/colorBranca"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_doze_recaidas" />
+        app:layout_constraintTop_toBottomOf="@+id/button_doze_tradicoes" />
 
     <Button
-        android:textColor="@color/colorBranca"
-        android:background="@drawable/menu_botoes_estilo"
         android:id="@+id/button_amorExigente"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="30dp"
+        android:background="@drawable/menu_botoes_estilo"
         android:text="Princípio Básico do Amor- Exigente"
+        android:textColor="@color/colorBranca"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_doze_passos_AA" />
-
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@ import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.app.Dialog
 import android.content.DialogInterface
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Bundle
 import android.util.TypedValue
@@ -15,6 +16,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
 import com.alexandreobsilva.a12passosnamauricio.R
+import com.alexandreobsilva.a12passosnamauricio.model.data.repositorys.SharedPreferencesClient
 import kotlinx.android.synthetic.main.activity_calculadora.*
 import org.joda.time.*
 import org.joda.time.format.DateTimeFormat
@@ -23,12 +25,15 @@ import java.util.*
 class CalculadoraActivity : AppCompatActivity() {
 
     lateinit var mCustomTitleDate: Button
+    lateinit var sharedPreferencesClient: SharedPreferencesClient
+    var minicialdate: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calculadora)
 
         mCustomTitleDate = findViewById(R.id.buttonPegaData)
+
         mCustomTitleDate.setOnClickListener {
             val fragment: DialogFragment = CustomDatePickerFragment()
             fragment.show(supportFragmentManager, "Data Picker")
@@ -36,10 +41,19 @@ class CalculadoraActivity : AppCompatActivity() {
 
         buttonCalcular.setOnClickListener { calcular() }
         button_calculadora_voltar.setOnClickListener { finish() }
+
+        sharedPreferencesClient = SharedPreferencesClient(this)
+        minicialdate = sharedPreferencesClient.getString("dataInicial")
+        minicialdate?.takeIf {it.isNotEmpty()}?.let {
+            inputDataCalculadora2.setText(minicialdate)
+            calcular()
+        }
     }
 
     private fun calcular() {
+
         val dataInicial = inputDataCalculadora2.text.toString()
+        sharedPreferencesClient.setString("dataInicial", dataInicial)
 
         val formatter = DateTimeFormat.forPattern("dd/MM/yyyy")
         val dataInicialDate = formatter.parseLocalDate(dataInicial) ?: return
@@ -50,7 +64,8 @@ class CalculadoraActivity : AppCompatActivity() {
         val meses = Months.monthsBetween(dataInicialDate, dataFinalDate).months
         val anos = Years.yearsBetween(dataInicialDate, dataFinalDate).years
 
-        textResultadoCalculadora.text = resources.getQuantityString(R.plurals.dias_vitoria, dias, dias)
+        textResultadoCalculadoraDias.text = resources.getQuantityString(R.plurals.dias_vitoria, dias, dias)
+        textResultadoCalculadoraSemanas.text = resources.getQuantityString(R.plurals.semanas_vitoria, semanas, semanas)
         textResultadoCalculadoraMes.text = resources.getQuantityString(R.plurals.meses_vitoria, meses, meses)
         textResultadoCalculadoraAno.text = resources.getQuantityString(R.plurals.anos_vitoria, anos, anos)
     }

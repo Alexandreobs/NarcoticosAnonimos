@@ -12,21 +12,21 @@ import com.alexandreobsilva.a12passosnamauricio.view.activitys.DetalheActivity
 import kotlinx.android.synthetic.main.item_recycler.view.*
 
 class AdapterDasListas(private val context: Context, private var textoListas: MutableList<PassosTradicoesConceitos>) :
-    RecyclerView.Adapter<AdapterDasListas.GameViewHolder>() {
+    RecyclerView.Adapter<AdapterDasListas.ListasViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterDasListas.GameViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterDasListas.ListasViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.item_recycler, parent, false)
 
-        return GameViewHolder(view)
+        return ListasViewHolder(view)
     }
 
     override fun getItemCount(): Int = textoListas.size
 
-    override fun onBindViewHolder(holder: AdapterDasListas.GameViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: AdapterDasListas.ListasViewHolder, position: Int) {
         holder.bindView(textoListas[position])
     }
 
-    class GameViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class ListasViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val titulo = itemView.titulo_listt_text_view
 
