@@ -16,7 +16,7 @@
 
         <activity android:name=".view.activitys.DetalheDiarioActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".view.activitys.CalculadoraActivity"
+        <activity android:name=".view.activitys.CalculadoraFragment"
             android:screenOrientation="portrait"/>
         <activity android:name=".view.activitys.DetalheActivity"
             android:screenOrientation="portrait"/>

@@ -1,13 +1,11 @@
 package com.alexandreobsilva.a12passosnamauricio.view.activitys
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import com.alexandreobsilva.a12passosnamauricio.R
-import com.alexandreobsilva.a12passosnamauricio.view.fragments.DiarioFragment
 import com.alexandreobsilva.a12passosnamauricio.view.fragments.MenuDeTextosFragment
 import com.alexandreobsilva.a12passosnamauricio.view.fragments.PaginaDeLinksFragment
 import com.alexandreobsilva.a12passosnamauricio.view.fragments.RecyclerDiarioFragment
@@ -54,8 +52,8 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.btn_calculadora -> {
-                    val intent = Intent(this, CalculadoraActivity::class.java)
-                    startActivity(intent)
+                    loadFragment(CalculadoraFragment())
+                    return@setOnNavigationItemSelectedListener true
                 }
             }
             false

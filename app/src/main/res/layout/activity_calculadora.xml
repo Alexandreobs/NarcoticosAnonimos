@@ -4,24 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.activitys.CalculadoraActivity">
-
-
-    <include
-        android:id="@+id/include"
-        layout="@layout/toolbar_personalizada"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="2dp" />
-
-    <Button
-        android:id="@+id/button_calculadora_voltar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/canto_gradiente"
-        android:text="Voltar"
-        android:textColor="@color/colorBranca"
-        app:layout_constraintEnd_toEndOf="@+id/buttonPegaData"
-        app:layout_constraintTop_toTopOf="@+id/buttonCalcular" />
+    tools:context=".view.activitys.CalculadoraFragment">
 
     <TextView
         android:id="@+id/textResultadoCalculadoraDias"
@@ -91,46 +74,20 @@
     <EditText
         android:id="@+id/edDataDeInicio"
         android:layout_width="0dp"
+        app:layout_goneMarginTop="32dp"
         android:layout_height="wrap_content"
-        android:text="Data de Inicio"
-        android:gravity="center"
         android:layout_marginStart="50dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center"
+        android:text="Data de Inicio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
-
-    <Button
-
-        android:id="@+id/buttonCalcular"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:background="@drawable/canto_gradiente"
-        android:clickable="true"
-        android:text="calcular"
-        android:textColor="@color/colorBranca"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/buttonPegaData" />
-
-    <Button
-        android:id="@+id/buttonPegaData"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="30dp"
-        android:background="@drawable/canto_gradiente"
-        android:text="Data de Início"
-        android:textColor="@color/colorBranca"
-        app:layout_constraintBottom_toTopOf="@+id/buttonCalcular"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textResultadoCalculadoraAno"
-        app:layout_constraintVertical_bias="0.947" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

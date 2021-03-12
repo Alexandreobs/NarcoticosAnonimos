@@ -9,11 +9,11 @@ import android.content.DialogInterface
 import android.graphics.Color
 import android.os.Bundle
 import android.util.TypedValue
-import android.view.Gravity
-import android.view.WindowManager
+import android.view.*
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.alexandreobsilva.a12passosnamauricio.R
@@ -23,46 +23,41 @@ import kotlinx.android.synthetic.main.activity_calculadora.*
 import org.joda.time.*
 import org.joda.time.format.DateTimeFormat
 import java.math.RoundingMode.valueOf
+import java.text.SimpleDateFormat
 import java.util.*
 
-class CalculadoraActivity : AppCompatActivity() {
+class CalculadoraFragment : Fragment() {
 
-    lateinit var mCustomTitleDate: Button
     lateinit var sharedPreferencesClient: SharedPreferencesClient
     var mInicialDate: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_calculadora)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.activity_calculadora, container, false)
+    }
 
-
-        mCustomTitleDate = findViewById(R.id.buttonPegaData)
-
-        mCustomTitleDate.setOnClickListener {
-            val fragment: DialogFragment = CustomDatePickerFragment()
-            fragment.show(supportFragmentManager, "Data Picker")
-        }
-
-        edDataDeInicio.setOnFocusChangeListener { view, hasFocus ->
-            if (hasFocus) {
-                edDataDeInicio.setOnClickListener {
-                    val fragment: DialogFragment = CustomDatePickerFragment()
-                    fragment.show(supportFragmentManager, "Data Picker")
-                }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        edDataDeInicio.setOnClickListener {
+            val fragment = CustomDatePickerFragment()
+            fragment.onSetDateListener = { dataInserida ->
+                val formatter = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+                edDataDeInicio.setText(formatter.format(dataInserida))
+                calcular()
             }
+            fragment.show(childFragmentManager, "Data Picker")
         }
 
-        buttonCalcular.setOnClickListener { calcular() }
-        button_calculadora_voltar.setOnClickListener { finish() }
 
-        sharedPreferencesClient = SharedPreferencesClient(this)
+        sharedPreferencesClient = SharedPreferencesClient(requireContext())
         mInicialDate = sharedPreferencesClient.getString("dataInicial")
         mInicialDate?.takeIf { it.isNotEmpty() }?.let {
             edDataDeInicio.setText(mInicialDate)
             calcular()
         }
-
-
     }
 
     private fun calcular() {
@@ -91,6 +86,9 @@ class CalculadoraActivity : AppCompatActivity() {
 
 
     class CustomDatePickerFragment : DialogFragment(), DatePickerDialog.OnDateSetListener {
+
+        var onSetDateListener: (Date) -> Unit = { }
+
         override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
 
             val calendar: Calendar = Calendar.getInstance()
@@ -121,8 +119,16 @@ class CalculadoraActivity : AppCompatActivity() {
             textView.setText("Seleção de Data")
             textView.setTextColor(Color.parseColor("#ffffff"))
             textView.setBackgroundColor(Color.parseColor("#5412DC"))
-            datePickerDialog.setButton(DatePickerDialog.BUTTON_POSITIVE, "Confirmar", datePickerDialog)
-            datePickerDialog.setButton(DatePickerDialog.BUTTON_NEGATIVE, "Cancelar", datePickerDialog);
+            datePickerDialog.setButton(
+                DatePickerDialog.BUTTON_POSITIVE,
+                "Confirmar",
+                datePickerDialog
+            )
+            datePickerDialog.setButton(
+                DatePickerDialog.BUTTON_NEGATIVE,
+                "Cancelar",
+                datePickerDialog
+            );
 
             datePickerDialog.setCustomTitle(textView)
 
@@ -130,19 +136,16 @@ class CalculadoraActivity : AppCompatActivity() {
         }
 
         override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMoth: Int) {
+            val calendario = Calendar.getInstance()
+            calendario.set(Calendar.DAY_OF_MONTH, dayOfMoth)
+            calendario.set(Calendar.MONTH, month)
+            calendario.set(Calendar.YEAR, year)
+            calendario.set(Calendar.HOUR, 0)
+            calendario.set(Calendar.MINUTE, 0)
+            calendario.set(Calendar.SECOND, 0)
+            calendario.set(Calendar.MILLISECOND, 0)
 
-            val builder = AlertDialog.Builder(requireContext())
-            builder.apply {
-                setPositiveButton(R.string.texto_OK,
-                    DialogInterface.OnClickListener { dialog, id ->
-
-                    })
-                    .setNegativeButton(R.string.texto_cancelar,
-                        DialogInterface.OnClickListener { dialog, id ->
-
-
-                        })
-            }
+            onSetDateListener.invoke(calendario.time)
         }
     }
 }
