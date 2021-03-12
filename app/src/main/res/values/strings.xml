@@ -3,7 +3,8 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="texto_Explicatido_Diario">Escreva aqui</string>
-    <string name="texto_OK">OKKK</string>
+    <string name="texto_OK">Confirmar</string>
+    <string name="texto_cancelar">Cancelar</string>
 
     <plurals name="dias_vitoria">
         <item quantity="one">%d dia de vitória</item>

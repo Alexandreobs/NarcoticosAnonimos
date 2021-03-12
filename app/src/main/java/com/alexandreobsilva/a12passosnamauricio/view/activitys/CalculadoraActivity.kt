@@ -3,34 +3,38 @@ package com.alexandreobsilva.a12passosnamauricio.view.activitys
 import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.app.Dialog
+import android.app.PendingIntent.getActivity
+import android.content.Context
 import android.content.DialogInterface
-import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Bundle
 import android.util.TypedValue
 import android.view.Gravity
-import android.widget.Button
-import android.widget.DatePicker
-import android.widget.RelativeLayout
-import android.widget.TextView
+import android.view.WindowManager
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import com.alexandreobsilva.a12passosnamauricio.R
 import com.alexandreobsilva.a12passosnamauricio.model.data.repositorys.SharedPreferencesClient
+import com.alexandreobsilva.a12passosnamauricio.view.fragments.DiarioFragment
 import kotlinx.android.synthetic.main.activity_calculadora.*
 import org.joda.time.*
 import org.joda.time.format.DateTimeFormat
+import java.math.RoundingMode.valueOf
 import java.util.*
 
 class CalculadoraActivity : AppCompatActivity() {
 
     lateinit var mCustomTitleDate: Button
     lateinit var sharedPreferencesClient: SharedPreferencesClient
-    var minicialdate: String? = null
+    var mInicialDate: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calculadora)
+
 
         mCustomTitleDate = findViewById(R.id.buttonPegaData)
 
@@ -39,20 +43,31 @@ class CalculadoraActivity : AppCompatActivity() {
             fragment.show(supportFragmentManager, "Data Picker")
         }
 
+        edDataDeInicio.setOnFocusChangeListener { view, hasFocus ->
+            if (hasFocus) {
+                edDataDeInicio.setOnClickListener {
+                    val fragment: DialogFragment = CustomDatePickerFragment()
+                    fragment.show(supportFragmentManager, "Data Picker")
+                }
+            }
+        }
+
         buttonCalcular.setOnClickListener { calcular() }
         button_calculadora_voltar.setOnClickListener { finish() }
 
         sharedPreferencesClient = SharedPreferencesClient(this)
-        minicialdate = sharedPreferencesClient.getString("dataInicial")
-        minicialdate?.takeIf {it.isNotEmpty()}?.let {
-            inputDataCalculadora2.setText(minicialdate)
+        mInicialDate = sharedPreferencesClient.getString("dataInicial")
+        mInicialDate?.takeIf { it.isNotEmpty() }?.let {
+            edDataDeInicio.setText(mInicialDate)
             calcular()
         }
+
+
     }
 
     private fun calcular() {
 
-        val dataInicial = inputDataCalculadora2.text.toString()
+        val dataInicial = edDataDeInicio.text.toString()
         sharedPreferencesClient.setString("dataInicial", dataInicial)
 
         val formatter = DateTimeFormat.forPattern("dd/MM/yyyy")
@@ -64,11 +79,16 @@ class CalculadoraActivity : AppCompatActivity() {
         val meses = Months.monthsBetween(dataInicialDate, dataFinalDate).months
         val anos = Years.yearsBetween(dataInicialDate, dataFinalDate).years
 
-        textResultadoCalculadoraDias.text = resources.getQuantityString(R.plurals.dias_vitoria, dias, dias)
-        textResultadoCalculadoraSemanas.text = resources.getQuantityString(R.plurals.semanas_vitoria, semanas, semanas)
-        textResultadoCalculadoraMes.text = resources.getQuantityString(R.plurals.meses_vitoria, meses, meses)
-        textResultadoCalculadoraAno.text = resources.getQuantityString(R.plurals.anos_vitoria, anos, anos)
+        textResultadoCalculadoraDias.text =
+            resources.getQuantityString(R.plurals.dias_vitoria, dias, dias)
+        textResultadoCalculadoraSemanas.text =
+            resources.getQuantityString(R.plurals.semanas_vitoria, semanas, semanas)
+        textResultadoCalculadoraMes.text =
+            resources.getQuantityString(R.plurals.meses_vitoria, meses, meses)
+        textResultadoCalculadoraAno.text =
+            resources.getQuantityString(R.plurals.anos_vitoria, anos, anos)
     }
+
 
     class CustomDatePickerFragment : DialogFragment(), DatePickerDialog.OnDateSetListener {
         override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
@@ -80,6 +100,7 @@ class CalculadoraActivity : AppCompatActivity() {
 
             val datePickerDialog = DatePickerDialog(
                 requireContext(),
+                AlertDialog.THEME_HOLO_LIGHT,
                 this,
                 year,
                 month,
@@ -112,11 +133,14 @@ class CalculadoraActivity : AppCompatActivity() {
             builder.apply {
                 setPositiveButton(R.string.texto_OK,
                     DialogInterface.OnClickListener { dialog, id ->
-                        // User clicked OK button
+
                     })
+                    .setNegativeButton(R.string.texto_cancelar,
+                        DialogInterface.OnClickListener { dialog, id ->
+
+
+                        })
             }
         }
     }
 }
-
-
