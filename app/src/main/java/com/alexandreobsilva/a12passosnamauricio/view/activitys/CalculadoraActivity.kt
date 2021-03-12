@@ -121,6 +121,8 @@ class CalculadoraActivity : AppCompatActivity() {
             textView.setText("Seleção de Data")
             textView.setTextColor(Color.parseColor("#ffffff"))
             textView.setBackgroundColor(Color.parseColor("#5412DC"))
+            datePickerDialog.setButton(DatePickerDialog.BUTTON_POSITIVE, "Confirmar", datePickerDialog)
+            datePickerDialog.setButton(DatePickerDialog.BUTTON_NEGATIVE, "Cancelar", datePickerDialog);
 
             datePickerDialog.setCustomTitle(textView)
 
