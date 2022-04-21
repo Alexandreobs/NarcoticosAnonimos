@@ -1,5 +1,9 @@
 package com.alexandreobsilva.a12passosnamauricio.model.pojos
 
+import android.content.Context
+import com.alexandreobsilva.a12passosnamauricio.R
+import com.alexandreobsilva.a12passosnamauricio.view.fragments.list.expansible.ExpansibleItem
+
 val listaDozePassos: MutableList<PassosTradicoesConceitos> = mutableListOf(
 
     PassosTradicoesConceitos(
@@ -159,7 +163,29 @@ val listaDozeConceitos: MutableList<PassosTradicoesConceitos> = mutableListOf(
 
 )
 
-val listaDeOracoes: MutableList<PassosTradicoesConceitos> = mutableListOf(
+fun loadPrayers(context: Context) = context.run {
+    listOf(
+        ExpansibleItem(
+            title = getString(R.string.prayer_name_oracao_serenidade),
+            description = getString(R.string.prayer_body_oracao_serenidade)
+        ),
+        ExpansibleItem(
+            title = getString(R.string.prayer_name_pai_nosso),
+            description = getString(R.string.prayer_body_pai_nosso)
+        ),
+        ExpansibleItem(
+            title = getString(R.string.prayer_name_oracao_amor),
+            description = getString(R.string.prayer_body_oracao_amor)
+        ),
+        ExpansibleItem(
+            title = getString(R.string.prayer_name_abencoai_dia),
+            description = getString(R.string.prayer_body_abencoai_dia)
+        )
+    )
+}
+
+
+val prayers: MutableList<PassosTradicoesConceitos> = mutableListOf(
 
     PassosTradicoesConceitos(
         "Oração da Serenidade", "Concedei-me, Senhor,\n" +
