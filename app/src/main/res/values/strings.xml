@@ -1,11 +1,124 @@
 <resources>
-    <string name="app_name"></string>
+    <string name="app_name">Vitória Anônima</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="texto_Explicatido_Diario">Escreva aqui</string>
     <string name="texto_OK">OKKK</string>
 
+    <string name="prayer_name_oracao_serenidade">Oração da Serenidade</string>
+    <string name="prayer_body_oracao_serenidade">
+        Concedei-me, Senhor,
+        \nA serenidade necessária
+        \nPara aceitar as coisas
+        \nQue eu não posso modificar;
+        \n
+        \nCoragem para modificar
+        \nAquelas que eu posso
+        \nE sabedoria para distinguir
+        \nUma das outras.
+        \n
+        \nVivendo um dia de cada vez,
+        \nDesfrutando um momento de cada vez,
+        \nAceitando as dificuldades como um caminho
+        \nPara alcançar a paz;
+        \n
+        \nConsiderando como Tu,
+        \nEste mundo pecador como ele é
+        \nE não como eu gostaria que fosse;
+        \n
+        \nConfiando que endireitarás todas as coisas
+        \nSe eu me render à Tua vontade,
+        \nPara que eu possa ser
+        \nModeradamente feliz nesta vida
+        \nE sumamente feliz contigo na eternidade.
+    </string>
 
+    <string name="prayer_name_pai_nosso">Pai Nosso</string>
+    <string name="prayer_body_pai_nosso">
+        Pai nosso, que estás nos céus!
+        \nSantificado seja o Teu nome.
+        \nVenha o teu Reino;
+        \nSeja feita a Tua vontade,
+        \nAssim na terra como no céu.
+        \nDá-nos hoje o nosso pão de cada dia.
+        \nPerdoai as nossas dívidas,
+        \nAssim como perdoamos
+        \nAos nossos devedores.
+        \nE não nos deixes cair em tentação,
+        \nMas livra-nos do mal,
+        \nPorque Teu é o Reino, o poder e a glória
+        \nPara sempre.
+        \n
+        \nAmém.
+    </string>
+
+    <string name="prayer_name_oracao_amor">Oração do Amor</string>
+    <string name="prayer_body_oracao_amor">
+        Senhor! Ilumina meus olhos
+        \nPara que eu veja os
+        \nDefeitos da minha alma.
+        \nE vendo-os para que eu não
+        \nComente os defeitos alheios.
+        \n
+        \nSenhor! Leva de mim a tristeza
+        \nMas não a entregueis a mais ninguém…
+        \n
+        \nEncha meu coração com a divina fé,
+        \nPara sempre louvar o vosso nome
+        \nE arranque de mim o orgulho e a presunção.
+        \n
+        \nFazei de mim um ser humano realmente justo
+        \nDá-me esperança para vencer
+        \nTodas essas ilusões terrenas.
+        \nPlanta em meu coração
+        \nA semente do amor incondicional
+        \nE ajuda-me a fazer feliz
+        \nO maior número possível de pessoas,
+        \nPara ampliar seus dias risonhos
+        \nE resumir suas noites tristonhas
+        \n
+        \nTransforma meus rivais em companheiros,
+        \nMeus companheiros em meus amigos,
+        \nE meus amigos em entes queridos…
+        \n
+        \nNão permita que eu seja
+        \nUm cordeiro perante os fortes
+        \nNem um leão perante os fracos…
+        \nDá-me Senhor, a sabedoria para perdoar
+        \nE afasta de mim o desejo da vingança,
+        \nMantendo eternamente
+        \nEm meu coração somente o amor.
+    </string>
+    
+    <string name="prayer_name_abencoai_dia">Abençoa o Nosso Dia Senhor!</string>
+    <string name="prayer_body_abencoai_dia">
+        Senhor, neste dia, venho pedir-te
+        \nSaúde, força, paz e sabedoria.
+        \n
+        \nQuero olhar hoje o mundo
+        \nCom olhos cheios de amor,
+        \nSer paciente, compreensivo, manso
+        \nPrudente; ver, além das aparências,
+        \nTeus filhos como tu mesmo os vês,
+        \nE assim não ver senão
+        \nBem em cada um.
+        \n
+        \nFecha os meus ouvidos a toda a calúnia.
+        \n
+        \nGuarda a minha língua de toda a maldade.
+        \n
+        \nQue só de bênçãos se encha o meu espírito.
+        \n
+        \nQue eu seja tão bondoso e alegre,
+        \nque todos quantos se aproximarem de mim,
+        \nsintam a tua presença.
+        \n
+        \nSenhor, reveste-me da tua beleza, e que,
+        \nDo decurso deste dia,
+        \nEu Te revele a todos.
+        \n
+        \nAMÉM.
+    </string>
 </resources>
 
 

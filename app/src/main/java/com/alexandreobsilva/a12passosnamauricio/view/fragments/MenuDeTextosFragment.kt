@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.alexandreobsilva.a12passosnamauricio.R
+import com.alexandreobsilva.a12passosnamauricio.model.pojos.loadPrayers
+import com.alexandreobsilva.a12passosnamauricio.view.fragments.list.expansible.ExpansibleListFragment
 import kotlinx.android.synthetic.main.fragment_menu_de_textos.view.*
 
 
@@ -42,12 +44,17 @@ class MenuDeTextosFragment : Fragment() {
             transaction.commit()
         })
 
-        minhaView.button_oracoes.setOnClickListener(View.OnClickListener {
-            val manager: FragmentManager? = fragmentManager
-            val transaction: FragmentTransaction = manager!!.beginTransaction()
-            transaction.replace(R.id.nav_host_fragment, OrarFragment())
-            transaction.commit()
-        })
+        // region Orações
+
+        val prayers = loadPrayers(requireContext())
+        minhaView.button_oracoes.setOnClickListener {
+            fragmentManager
+                ?.beginTransaction()
+                ?.replace(R.id.nav_host_fragment, ExpansibleListFragment.newInstance(prayers))
+                ?.commitAllowingStateLoss()
+        }
+
+        // endregion
 
         minhaView.button_doze_recaidas.setOnClickListener(View.OnClickListener {
             val manager: FragmentManager? = fragmentManager

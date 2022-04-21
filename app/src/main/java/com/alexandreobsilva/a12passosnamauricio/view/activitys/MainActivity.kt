@@ -59,8 +59,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun colocaToolBar() {
-        toolbar = findViewById(R.id.my_toolbar)
-        setSupportActionBar(toolbar)
+//        toolbar = findViewById(R.id.my_toolbar)
+//        setSupportActionBar(toolbar)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
